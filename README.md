@@ -1,4 +1,4 @@
-# Lua config neovim IDE
+# Lua config neovim MaxIDE
 ---
 
 ## tree
@@ -11,5 +11,5 @@
 │   ├── keymaps.lua
 │   ├── options.lua
 │   └── plugins.lua
-└── Readme.md
+└── README.md
 ```
