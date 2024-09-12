@@ -18,4 +18,73 @@ require('lazy').setup({
     {
         'crusoexia/vim-monokai',
     },
+    -- Install code ato pairs
+    {
+        'jiangmiao/auto-pairs',
+    },
+    -- Install vim signature
+    {
+        'kshenoy/vim-signature',
+    },
+    -- Install indentLine
+    {
+        'Yggdroot/indentLine',
+        config = function()
+            require("config.indentLine")
+        end,
+    },
+
+    -- Install vim-airline and vim-airline-themes
+    {
+        'vim-airline/vim-airline',
+    },
+    {
+        'vim-airline/vim-airline-themes',
+        depends = 'vim-airline/vim-airline',
+        config = function()
+            require("config.airline")
+        end,
+    },
+
+    -- Install nerdtree
+    {
+        'preservim/nerdtree',
+        config = function()
+            require("config.nerdtree")
+        end,
+    },
+    {
+        'Xuyuanp/nerdtree-git-plugin',
+    },
+
+	-- Treesitter-integration
+	{
+		"nvim-treesitter/nvim-treesitter",
+		build = ":TSUpdate",
+		config = function()
+			require("config.nvim-treesitter")
+		end,
+	},
+
+	-- Nvim-treesitter text objects
+	{
+		"nvim-treesitter/nvim-treesitter-textobjects",
+		dependencies = "nvim-treesitter/nvim-treesitter",
+		config = function()
+			require("config.nvim-treesitter-textobjects")
+		end,
+	},
+
+    -- Install nerdcommenter
+    {
+        'scrooloose/nerdcommenter',
+        config = function()
+            require("config.nerdcommenter")
+        end,
+    },
+    -- Install github copilot
+    {
+        'github/copilot.vim',
+    },
+
 })

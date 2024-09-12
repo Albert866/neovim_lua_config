@@ -26,11 +26,7 @@ vim.keymap.set("n", "<C-Down>", ":resize +2<CR>", opts)
 vim.keymap.set("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 vim.keymap.set("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
--- For nvim-tree.lua
 -- default leader key: \
--- vim.g.mapleader = " "
-
-vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 
 -----------------
 -- Visual mode --
