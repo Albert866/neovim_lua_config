@@ -18,9 +18,30 @@ require('lazy').setup({
     {
         'crusoexia/vim-monokai',
     },
-    -- Install code ato pairs
+	-- Better UI
+	-- Run `:checkhealth noice` to check for common issues
     {
-        'jiangmiao/auto-pairs',
+        "folke/noice.nvim",
+        event = "VeryLazy",
+        opts = {
+            -- add any options here
+        },
+        dependencies = {
+            -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+            "MunifTanjim/nui.nvim",
+            -- OPTIONAL:
+            --   `nvim-notify` is only needed, if you want to use the notification view.
+            --   If not available, we use `mini` as the fallback
+            "rcarriga/nvim-notify",
+        },
+    },
+	-- Autopairs: [], (), "", '', etc
+    {
+        "windwp/nvim-autopairs",
+        event = "InsertEnter",
+        config = function()
+            require("config.nvim-autopairs")
+        end,
     },
     -- Install vim signature
     {
@@ -30,7 +51,8 @@ require('lazy').setup({
     {
         'Yggdroot/indentLine',
         config = function()
-            require("config.indentLine")
+            vim.g.indent_guides_guide_size = 1
+            vim.g.indent_guides_start_level = 2
         end,
     },
 
@@ -49,31 +71,32 @@ require('lazy').setup({
     -- Install nerdtree
     {
         'preservim/nerdtree',
+        depends = "nvim-treesitter/nvim-treesitter",
         config = function()
             require("config.nerdtree")
         end,
     },
     {
         'Xuyuanp/nerdtree-git-plugin',
+        dependencies = 'preservim/nerdtree',
     },
 
 	-- Treesitter-integration
-	{
-		"nvim-treesitter/nvim-treesitter",
-		build = ":TSUpdate",
-		config = function()
-			require("config.nvim-treesitter")
-		end,
-	},
-
+    {
+        "nvim-treesitter/nvim-treesitter",
+        build = ":TSUpdate",
+        config = function()
+            require("config.nvim-treesitter")
+        end,
+    },
 	-- Nvim-treesitter text objects
-	{
-		"nvim-treesitter/nvim-treesitter-textobjects",
-		dependencies = "nvim-treesitter/nvim-treesitter",
-		config = function()
-			require("config.nvim-treesitter-textobjects")
-		end,
-	},
+    {
+        "nvim-treesitter/nvim-treesitter-textobjects",
+        dependencies = "nvim-treesitter/nvim-treesitter",
+        config = function()
+            require("config.nvim-treesitter-textobjects")
+        end,
+    },
 
     -- Install nerdcommenter
     {

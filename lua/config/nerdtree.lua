@@ -18,7 +18,7 @@ vim.api.nvim_create_autocmd('VimEnter', {
 vim.api.nvim_create_autocmd('BufEnter', {
     pattern = '*',
     callback = function()
-        if vim.fn.winnr('$') == 1 and vim.b.NERDTree and vim.b.NERDTree.isTabTree() then
+        if vim.fn.winnr('$') == 1 and vim.b.NERDTree and type(vim.b.NERDTree.isTabTree) == 'function' and vim.b.NERDTree.isTabTree() then
             vim.cmd('q')
         end
     end,
