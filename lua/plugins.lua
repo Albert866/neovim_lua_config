@@ -56,6 +56,23 @@ require('lazy').setup({
         end,
     },
 
+    -- Treesitter-integration
+    {
+        "nvim-treesitter/nvim-treesitter",
+        build = ":TSUpdate",
+        config = function()
+            require("config.nvim-treesitter")
+        end,
+    },
+    -- Nvim-treesitter text objects
+    {
+        "nvim-treesitter/nvim-treesitter-textobjects",
+        dependencies = "nvim-treesitter/nvim-treesitter",
+        config = function()
+            require("config.nvim-treesitter-textobjects")
+        end,
+    },
+
     -- Install vim-airline and vim-airline-themes
     {
         "vim-airline/vim-airline",
@@ -81,23 +98,6 @@ require('lazy').setup({
         dependencies = 'preservim/nerdtree',
     },
 
-    -- Treesitter-integration
-    {
-        "nvim-treesitter/nvim-treesitter",
-        build = ":TSUpdate",
-        config = function()
-            require("config.nvim-treesitter")
-        end,
-    },
-    -- Nvim-treesitter text objects
-    {
-        "nvim-treesitter/nvim-treesitter-textobjects",
-        dependencies = "nvim-treesitter/nvim-treesitter",
-        config = function()
-            require("config.nvim-treesitter-textobjects")
-        end,
-    },
-
     -- Install nvim-comment plugin
     {
         'terrortylor/nvim-comment',
@@ -105,6 +105,18 @@ require('lazy').setup({
             require("config.nvim-comment")
         end,
     },
+
+	-- Markdown support
+	{ "preservim/vim-markdown", ft = { "markdown" } },
+	-- Markdown previewer for nodejs 18.x version limit
+	{
+		"iamcco/markdown-preview.nvim",
+		cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+		ft = { "markdown" },
+		build = function()
+			vim.fn["mkdp#util#install"]()
+		end,
+	},
 
     -- Install github copilot
     {
