@@ -16,10 +16,10 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup({
     -- Install vim-monokai colorscheme
     {
-        'crusoexia/vim-monokai',
+        "crusoexia/vim-monokai",
     },
-	-- Better UI
-	-- Run `:checkhealth noice` to check for common issues
+    -- Better UI
+    -- Run `:checkhealth noice` to check for common issues
     {
         "folke/noice.nvim",
         event = "VeryLazy",
@@ -35,7 +35,7 @@ require('lazy').setup({
             "rcarriga/nvim-notify",
         },
     },
-	-- Autopairs: [], (), "", '', etc
+    -- Autopairs: [], (), "", '', etc
     {
         "windwp/nvim-autopairs",
         event = "InsertEnter",
@@ -45,23 +45,23 @@ require('lazy').setup({
     },
     -- Install vim signature
     {
-        'kshenoy/vim-signature',
+        "kshenoy/vim-signature",
     },
-    -- Install indentLine
+    -- Show indentation and blankline
     {
-        'Yggdroot/indentLine',
+        "lukas-reineke/indent-blankline.nvim",
+        main = "ibl",
         config = function()
-            vim.g.indent_guides_guide_size = 1
-            vim.g.indent_guides_start_level = 2
+            require("config.indent-blankline")
         end,
     },
 
     -- Install vim-airline and vim-airline-themes
     {
-        'vim-airline/vim-airline',
+        "vim-airline/vim-airline",
     },
     {
-        'vim-airline/vim-airline-themes',
+        "vim-airline/vim-airline-themes",
         depends = 'vim-airline/vim-airline',
         config = function()
             require("config.airline")
@@ -70,18 +70,18 @@ require('lazy').setup({
 
     -- Install nerdtree
     {
-        'preservim/nerdtree',
+        "preservim/nerdtree",
         depends = "nvim-treesitter/nvim-treesitter",
         config = function()
             require("config.nerdtree")
         end,
     },
     {
-        'Xuyuanp/nerdtree-git-plugin',
+        "Xuyuanp/nerdtree-git-plugin",
         dependencies = 'preservim/nerdtree',
     },
 
-	-- Treesitter-integration
+    -- Treesitter-integration
     {
         "nvim-treesitter/nvim-treesitter",
         build = ":TSUpdate",
@@ -89,7 +89,7 @@ require('lazy').setup({
             require("config.nvim-treesitter")
         end,
     },
-	-- Nvim-treesitter text objects
+    -- Nvim-treesitter text objects
     {
         "nvim-treesitter/nvim-treesitter-textobjects",
         dependencies = "nvim-treesitter/nvim-treesitter",
@@ -100,14 +100,14 @@ require('lazy').setup({
 
     -- Install nerdcommenter
     {
-        'scrooloose/nerdcommenter',
+        "scrooloose/nerdcommenter",
         config = function()
             require("config.nerdcommenter")
         end,
     },
     -- Install github copilot
     {
-        'github/copilot.vim',
+        "github/copilot.vim",
     },
 
 })

@@ -1,3 +1,5 @@
+-- config/nerdtree.lua
+
 -- 设置 NERDTree 视窗大小
 vim.g.NERDTreeWinSize = 28
 

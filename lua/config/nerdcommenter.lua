@@ -1,3 +1,5 @@
+-- config for nerdcommenter
+
 -- 添加注释分隔符后默认添加空格
 vim.g.NERDSpaceDelims = 1
 
