@@ -59,19 +59,19 @@ require('lazy').setup({
     -- Install vim-airline and vim-airline-themes
     {
         "vim-airline/vim-airline",
+        config = function()
+            require("config.airline")
+        end,
     },
     {
         "vim-airline/vim-airline-themes",
         depends = 'vim-airline/vim-airline',
-        config = function()
-            require("config.airline")
-        end,
     },
 
     -- Install nerdtree
     {
         "preservim/nerdtree",
-        depends = "nvim-treesitter/nvim-treesitter",
+        dependencies = "nvim-treesitter/nvim-treesitter",
         config = function()
             require("config.nerdtree")
         end,
@@ -98,13 +98,14 @@ require('lazy').setup({
         end,
     },
 
-    -- Install nerdcommenter
+    -- Install nvim-comment plugin
     {
-        "scrooloose/nerdcommenter",
+        'terrortylor/nvim-comment',
         config = function()
-            require("config.nerdcommenter")
+            require("config.nvim-comment")
         end,
     },
+
     -- Install github copilot
     {
         "github/copilot.vim",

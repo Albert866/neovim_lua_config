@@ -3,6 +3,7 @@ if not is_ok then
 	return
 end
 
+-- 语法高亮，代码折叠，增量选择，代码导航
 configs.setup({
 	-- A list of parser names, or "all" (the four listed parsers should always be installed)
 	ensure_installed = {
@@ -50,7 +51,7 @@ configs.setup({
 		-- disable highlighting for the `tex` filetype, you need to include `latex` in this list as this is
 		-- the name of the parser)
 		-- if you want to disable the module for some languages you can pass a list to the `disable` option.
-		disable = { "c", "rust" },
+		-- disable = { "c", "rust" },
 		-- Or use a function for more flexibility, e.g. to disable slow treesitter highlight for large files
 		-- disable = function(lang, buf)
 		--     local max_filesize = 100 * 1024 -- 100 KB
@@ -68,7 +69,8 @@ configs.setup({
 	},
 	-- Indentation based on treesitter for the = operator. NOTE: This is an experimental feature.
 	-- indent = {
-	--     enable = true
+          -- Disable Indentation, because we use `lukas-reineke/indent-blankline.nvim`
+	--    enable = true
 	-- },
 	incremental_selection = {
 		enable = true,
@@ -77,10 +79,10 @@ configs.setup({
 		-- scope_incremental: in visual mode, increment to the upper scope
 		-- node_decremental: in visual mode, decrement to the previous named node.
 		keymaps = {
-			init_selection = "gss",
-			node_incremental = "gsi",
-			scope_incremental = "gsc",
-			node_decremental = "gsd",
+			init_selection = "<leader>ss",
+			node_incremental = "<leader>si",
+			scope_incremental = "<leader>sc",
+			node_decremental = "<leader>sd",
 		},
 	},
 })

@@ -1,12 +1,13 @@
 -- config/nerdtree.lua
+-- press 'm' select tree options into NERDTree
 
--- 设置 NERDTree 视窗大小
+-- set NERDTree viwer size
 vim.g.NERDTreeWinSize = 28
 
--- 开启 NERDTree 时自动显示书签
+-- start NERDTree automatically
 vim.g.NERDTreeShowBookmarks = 1
 
--- 打开 Vim 时如果没有文件自动打开 NERDTree
+-- Automatically open NERDTree if no files are opened when starting Vim
 vim.api.nvim_create_autocmd('VimEnter', {
     pattern = '*',
     callback = function()
@@ -16,7 +17,7 @@ vim.api.nvim_create_autocmd('VimEnter', {
     end,
 })
 
--- 当 NERDTree 为剩下的唯一窗口时自动关闭
+-- Automatically close NERDTree if it is the only remaining window
 vim.api.nvim_create_autocmd('BufEnter', {
     pattern = '*',
     callback = function()
@@ -26,7 +27,7 @@ vim.api.nvim_create_autocmd('BufEnter', {
     end,
 })
 
--- 自动切换到上一个缓冲区
+-- Automatically switch to the previous buffer
 vim.api.nvim_create_autocmd('BufEnter', {
     pattern = '*',
     callback = function()
@@ -39,26 +40,27 @@ vim.api.nvim_create_autocmd('BufEnter', {
     end,
 })
 
--- 设置树的显示图标
+-- Set the icons for the tree display
 vim.g.NERDTreeDirArrowExpandable = '+'
 vim.g.NERDTreeDirArrowCollapsible = '-'
 
--- 过滤所有 .o 文件不显示
+-- Filter out all .o files from being displayed
 vim.g.NERDTreeIgnore = { '\\.o$' }
 
--- 是否显示行号
+-- Whether to show line numbers
 vim.g.NERDTreeShowLineNumbers = 0
 
--- 不显示隐藏文件
+-- Do not show hidden files
 vim.g.NERDTreeHidden = 1
 
--- 美化 NERDTree
+-- Beautify NERDTree
 vim.g.NERDTreeMinimalUI = 1
 vim.g.NERDTreeDirArrows = 1
 
--- 设置快捷键
-vim.api.nvim_set_keymap('n', '<leader>mt', ':NERDTreeToggle<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>ms', ':NERDTreeFocus<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>me', ':NERDTree<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>mf', ':NERDTreeFind<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>m.', ':NERDTreeHidden<CR>', { noremap = true, silent = true })
+-- Set key mappings
+vim.api.nvim_set_keymap('n', '<leader>tt', ':NERDTreeToggle<CR>', { noremap = true, silent = true }) -- Toggle NERDTree
+vim.api.nvim_set_keymap('n', '<leader>tf', ':NERDTreeFocus<CR>', { noremap = true, silent = true }) -- Focus NERDTree
+vim.api.nvim_set_keymap('n', '<leader>te', ':NERDTree<CR>', { noremap = true, silent = true }) -- Open NERDTree
+vim.api.nvim_set_keymap('n', '<leader>tg', ':NERDTreeFind<CR>', { noremap = true, silent = true }) -- Find current file in NERDTree
+vim.api.nvim_set_keymap('n', '<leader>th', ':NERDTreeHidden<CR>', { noremap = true, silent = true }) -- Toggle hidden files in NERDTree
+

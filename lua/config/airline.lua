@@ -1,13 +1,14 @@
 -- config/vim-airline
 
+-- set theme desertink/dark/monokai
+vim.g.airline_powerline_fonts = 1
+vim.g.airline_theme = "monokai"
+
 -- enable tabline extern
 vim.g['airline#extensions#tabline#enabled'] = 1
 vim.g['airline#extensions#tabline#left_alt_sep'] = '|'
 vim.g['airline#extensions#tabline#buffer_nr_show'] = 0
 vim.g['airline#extensions#tabline#formatter'] = 'default'
-
--- set theme
-vim.g.airline_theme = 'desertink'
 
 -- enable keymap extern
 vim.g['airline#extensions#keymap#enabled'] = 1
@@ -27,7 +28,7 @@ vim.g['airline#extensions#tabline#buffer_idx_format'] = {
     ['9'] = '9 '
 }
 
--- Set swith tab key
+-- Set swith tab key mappings
 vim.api.nvim_set_keymap('n', '<leader>0', '<Plug>AirlineSelectTab0', {})
 vim.api.nvim_set_keymap('n', '<leader>1', '<Plug>AirlineSelectTab1', {})
 vim.api.nvim_set_keymap('n', '<leader>2', '<Plug>AirlineSelectTab2', {})

@@ -3,6 +3,8 @@ if not is_ok then
 	return
 end
 
+-- Is nvim-treesitter extern，text objects select and AI auto select
+
 configs.setup({
 	textobjects = {
 		select = {
@@ -14,6 +16,7 @@ configs.setup({
 			keymaps = {
 				-- outer: outer part
 				-- inner: inner part
+                -- use : vaf, vif, vac, vic, val, vil
 				["af"] = "@function.outer",
 				["if"] = "@function.inner",
 				["ac"] = "@class.outer",
