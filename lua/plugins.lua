@@ -106,6 +106,15 @@ require('lazy').setup({
         end,
     },
 
+    -- Install LeaderF plugin, and run :LeaderfInstallCExtension
+    {
+        "Yggdroot/LeaderF",
+        run = ":LeaderfInstallCExtension",
+        config = function()
+            require("config.leaderf")
+        end,
+    },
+
 	-- Markdown support
 	{ "preservim/vim-markdown", ft = { "markdown" } },
 	-- Markdown previewer for nodejs 18.x version limit
@@ -122,5 +131,4 @@ require('lazy').setup({
     {
         "github/copilot.vim",
     },
-
 })
