@@ -138,4 +138,19 @@ require('lazy').setup({
         -- https://github.com/github/copilot.vim.git  :Copilot setup   :Copilot enable/disable/status
         "github/copilot.vim",
     },
+
+    -- Install nvim-lspconfig/mason/mason-lspconfig
+    {
+        "villiamboman/mason.nvim",
+        run = ":MasonUpdate",
+    },
+    {
+        "villiamboman/mason-lspconfig.nvim",
+        dependencies = { "williamboman/mason.nvim" },
+    },
+    {
+        "neovim/nvim-lspconfig",
+        dependencies = { "williamboman/mason-lspconfig.nvim" },
+    },
+
 })
