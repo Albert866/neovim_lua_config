@@ -77,6 +77,14 @@ require('lazy').setup({
             require("config.nvim-treesitter-textobjects")
         end,
     },
+    -- Install nvim-ts-rainbow
+    {
+        "p00f/nvim-ts-rainbow",
+        dependencies = "nvim-treesitter/nvim-treesitter",
+        config = function()
+            require("config.nvim-ts-rainbow")
+        end,
+    },
 
     -- Install vim-airline and vim-airline-themes
     {
@@ -119,18 +127,6 @@ require('lazy').setup({
             require("config.leaderf")
         end,
     },
-
-	-- Markdown support
-	{ "preservim/vim-markdown", ft = { "markdown" } },
-	-- Markdown previewer for nodejs 18.x version limit
-	{
-		"iamcco/markdown-preview.nvim",
-		cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-		ft = { "markdown" },
-		build = function()
-			vim.fn["mkdp#util#install"]()
-		end,
-	},
 
     -- Install github copilot
     {

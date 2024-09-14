@@ -67,6 +67,7 @@ configs.setup({
 		-- Instead of true it can also be a list of languages
 		additional_vim_regex_highlighting = false,
 	},
+
 	-- Indentation based on treesitter for the = operator. NOTE: This is an experimental feature.
 	-- indent = {
           -- Disable Indentation, because we use `lukas-reineke/indent-blankline.nvim`
