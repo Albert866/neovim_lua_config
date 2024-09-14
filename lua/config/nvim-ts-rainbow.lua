@@ -1,3 +1,4 @@
+-- nvim-ts-rainbow.lua is a plugin that highlights parentheses, brackets, and braces according
 
 require'nvim-treesitter.configs'.setup {
     -- Enable rainbow parentheses

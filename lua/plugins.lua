@@ -135,18 +135,13 @@ require('lazy').setup({
         "github/copilot.vim",
     },
 
-    -- Install nvim-lspconfig/mason/mason-lspconfig
+    -- Install LSP plugins
     {
-        "villiamboman/mason.nvim",
-        run = ":MasonUpdate",
-    },
-    {
-        "villiamboman/mason-lspconfig.nvim",
-        dependencies = { "williamboman/mason.nvim" },
-    },
-    {
-        "neovim/nvim-lspconfig",
-        dependencies = { "williamboman/mason-lspconfig.nvim" },
+        "neoclide/coc.nvim",
+        branch = "release",
+        config = function()
+            require("config.nvim-coc")
+        end,
     },
 
 })
