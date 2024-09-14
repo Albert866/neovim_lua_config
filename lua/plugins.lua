@@ -45,6 +45,11 @@ require('lazy').setup({
     },
     -- Install vim signature
     {
+        -- m{letter}：set/unset an mark, example: `m + a` set an mark a
+        -- '{letter}：jump to {letter}
+        -- :marks：list all tags
+        -- :delmarks {letter}：delete tag {letter}
+        -- Please note that lowercase: letter marks (such as "a") are only valid in the current file, while uppercase letter marks (such as "A") are valid across all files.
         "kshenoy/vim-signature",
     },
     -- Show indentation and blankline
@@ -129,6 +134,8 @@ require('lazy').setup({
 
     -- Install github copilot
     {
+        -- github copilot: https://docs.github.com/en/copilot/getting-started-with-github-copilot?tool=vimneovim
+        -- https://github.com/github/copilot.vim.git  :Copilot setup   :Copilot enable/disable/status
         "github/copilot.vim",
     },
 })
