@@ -113,9 +113,9 @@ require('lazy').setup({
 
     -- Install nvim-comment plugin
     {
-        'terrortylor/nvim-comment',
+        'scrooloose/nerdcommenter',
         config = function()
-            require("config.nvim-comment")
+            require("config.nerdcommenter")
         end,
     },
 
