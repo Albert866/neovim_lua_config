@@ -26,6 +26,7 @@ vim.g.NERDTrimTrailingWhitespace = 1
 -- Enable NERDCommenterToggle to check all selected lines is commented or not 
 vim.g.NERDToggleCheckAllLines = 1
 
+-- Define a function to simplify key mappings
 local function map(mode, lhs, rhs, opts)
   local options = { noremap = true, silent = true }
   if opts then
@@ -34,7 +35,7 @@ local function map(mode, lhs, rhs, opts)
   vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
--- Create NERDCommenter key mappings
+-- Create key mappings for nerdcommenter
 map('n', '<leader>cc', '<Plug>NERDCommenterComment')
 map('v', '<leader>cc', '<Plug>NERDCommenterComment')
 
