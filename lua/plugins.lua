@@ -1,5 +1,6 @@
 -- Install Lazy.nvim automatically if it's not installed(Bootstraping)
 -- Hint: string concatenation is done by `..`
+-- Enter lazy manage page : Lazy
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
     vim.fn.system({

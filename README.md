@@ -55,6 +55,7 @@ node --version
 sudo apt-get install -y npm
 sudo npm install npm@latest -g
 npm -v
+sudo npm install -g neovim
 ```
 
 ## Install yarn
@@ -65,7 +66,6 @@ echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/source
 
 sudo apt-get update
 sudo apt-get install yarn
-
 yarn --version
 ```
 
