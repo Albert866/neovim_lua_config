@@ -30,13 +30,20 @@
 
 ## Install neovim
 
-- neovim stable version greater than 0.7.2
+- neovim stable version greater than 0.8.0
 
 ```bash
 sudo add-apt-repository ppa:neovim-ppa/stable -y # OR sudo add-apt-repository ppa:neovim-ppa/unstable -y
 sudo apt update
 sudo apt-get install -y neovim
 neovim --version
+```
+
+- Download neovim appimage and Install
+
+```bash
+# Select the latest version
+https://github.com/neovim/neovim/releases
 ```
 
 ## Install nodejs
