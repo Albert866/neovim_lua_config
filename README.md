@@ -79,7 +79,7 @@ yarn --version
 ## Install python3
 
 ```bash
-sudo apt-get install -y python3 python3-venv python3-dev python3-pip
+sudo apt-get install -y python3 python3-venv python3-dev python3-pip python3-neovim
 python3 --version
 pip3 install --upgrade pip
 pip3 --version

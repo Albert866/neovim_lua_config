@@ -1,6 +1,8 @@
-local is_ok, configs = pcall(require, "nvim-treesitter-textobjects.configs")
+-- nvim-treesitter/nvim-treesitter-textobjects configure
+
+local is_ok, configs = pcall(require, "nvim-treesitter.configs")
 if not is_ok then
-    print("nvim-treesitter-textobjects.configs not found !!!")
+    print("nvim-treesitter.configs not found !!!")
 	return
 end
 
