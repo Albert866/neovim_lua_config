@@ -1,5 +1,8 @@
+-- nvim-autopairs configure
+
 local is_ok, npairs = pcall(require, "nvim-autopairs")
 if not is_ok then
+    print("nvim-autopairs not find !!!")
 	return
 end
 

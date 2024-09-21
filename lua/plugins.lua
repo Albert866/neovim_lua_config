@@ -97,19 +97,21 @@ require('lazy').setup({
     {
         "vim-airline/vim-airline-themes",
         depends = 'vim-airline/vim-airline',
+        config = function()
+            vim.g.airline_powerline_fonts = 1
+            vim.g.airline_theme = "desertink"
+        end,
     },
 
     -- Install nerdtree
     {
+        "Xuyuanp/nerdtree-git-plugin",
+    },
+    {
         "preservim/nerdtree",
-        dependencies = "nvim-treesitter/nvim-treesitter",
         config = function()
             require("config.nerdtree")
         end,
-    },
-    {
-        "Xuyuanp/nerdtree-git-plugin",
-        dependencies = 'preservim/nerdtree',
     },
 
     -- Install nvim-comment plugin
@@ -134,6 +136,7 @@ require('lazy').setup({
         -- github copilot: https://docs.github.com/en/copilot/getting-started-with-github-copilot?tool=vimneovim
         -- https://github.com/github/copilot.vim.git  :Copilot setup   :Copilot enable/disable/status
         "github/copilot.vim",
+        event = "InsertEnter",
     },
 
     -- Install LSP plugins

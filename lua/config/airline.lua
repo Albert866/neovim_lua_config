@@ -1,9 +1,5 @@
 -- config/vim-airline
 
--- set theme desertink/dark/monokai
-vim.g.airline_powerline_fonts = 1
-vim.g.airline_theme = "monokai"
-
 -- enable tabline extern
 vim.g['airline#extensions#tabline#enabled'] = 1
 vim.g['airline#extensions#tabline#left_alt_sep'] = '|'

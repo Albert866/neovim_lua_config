@@ -1,4 +1,5 @@
--- LeaderF cofniguration
+-- Yggdroot/LeaderF cofniguration
+
 vim.g.Lf_HideHelp = 1
 vim.g.Lf_UseCache = 0
 vim.g.Lf_UseVersionControlTool = 0
