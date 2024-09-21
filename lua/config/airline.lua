@@ -1,5 +1,9 @@
 -- config/vim-airline
 
+-- congfigure vim-airline-themes
+vim.g.airline_powerline_fonts = 1
+vim.g.airline_theme = "desertink"
+
 -- enable tabline extern
 vim.g['airline#extensions#tabline#enabled'] = 1
 vim.g['airline#extensions#tabline#left_alt_sep'] = '|'
@@ -24,20 +28,16 @@ vim.g['airline#extensions#tabline#buffer_idx_format'] = {
     ['9'] = '9 '
 }
 
--- Set swith tab key mappings
+-- Set swith tab key mappings, swith num.1~10 tab
+for i = 1, 9 do
+  vim.api.nvim_set_keymap('n', '<Leader>' .. i, '<Plug>AirlineSelectTab' .. i, {})
+end
 vim.api.nvim_set_keymap('n', '<leader>0', '<Plug>AirlineSelectTab0', {})
-vim.api.nvim_set_keymap('n', '<leader>1', '<Plug>AirlineSelectTab1', {})
-vim.api.nvim_set_keymap('n', '<leader>2', '<Plug>AirlineSelectTab2', {})
-vim.api.nvim_set_keymap('n', '<leader>3', '<Plug>AirlineSelectTab3', {})
-vim.api.nvim_set_keymap('n', '<leader>4', '<Plug>AirlineSelectTab4', {})
-vim.api.nvim_set_keymap('n', '<leader>5', '<Plug>AirlineSelectTab5', {})
-vim.api.nvim_set_keymap('n', '<leader>6', '<Plug>AirlineSelectTab6', {})
-vim.api.nvim_set_keymap('n', '<leader>7', '<Plug>AirlineSelectTab7', {})
-vim.api.nvim_set_keymap('n', '<leader>8', '<Plug>AirlineSelectTab8', {})
-vim.api.nvim_set_keymap('n', '<leader>9', '<Plug>AirlineSelectTab9', {})
+
 vim.api.nvim_set_keymap('n', '<leader>-', '<Plug>AirlineSelectPrevTab', {})
 vim.api.nvim_set_keymap('n', '<leader>=', '<Plug>AirlineSelectNextTab', {})
 vim.api.nvim_set_keymap('n', '<leader>q', ':bp<CR>:bd #<CR>', { noremap = true, silent = true })
+
 
 if vim.g.airline_symbols == nil then
     vim.g.airline_symbols = {}

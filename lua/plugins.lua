@@ -90,31 +90,24 @@ require('lazy').setup({
     -- Install vim-airline and vim-airline-themes
     {
         "vim-airline/vim-airline",
+        dependencies = 'vim-airline/vim-airline-themes',
         config = function()
             require("config.airline")
         end,
     },
-    {
-        "vim-airline/vim-airline-themes",
-        depends = 'vim-airline/vim-airline',
-        config = function()
-            vim.g.airline_powerline_fonts = 1
-            vim.g.airline_theme = "desertink"
-        end,
-    },
 
-    -- Install nerdtree
-    {
-        "Xuyuanp/nerdtree-git-plugin",
-    },
+    -- Install nerd tree
     {
         "preservim/nerdtree",
+        dependencies = {
+            'ryanoasis/vim-devicons',
+            'Xuyuanp/nerdtree-git-plugin',
+        },
         config = function()
             require("config.nerdtree")
         end,
     },
-
-    -- Install nvim-comment plugin
+    -- Install nerd commenter
     {
         'scrooloose/nerdcommenter',
         config = function()
@@ -147,5 +140,4 @@ require('lazy').setup({
             require("config.nvim-coc")
         end,
     },
-
 })

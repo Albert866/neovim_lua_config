@@ -123,3 +123,23 @@ clang++ -v
 sudo apt-get install -y ccls
 ccls --version
 ```
+
+## Set terminal fonts
+
+```bash
+# download FiraCode Nerd Font
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip
+
+# unzip fonts
+unzip FiraCode.zip -d ~/.local/share/fonts
+
+# flush fonts cache
+fc-cache -fv
+```
+
+### X-terminal set fonts
+- Preferences -> Profiles -> default -> General -> Font
+
+### System terminal set fonts
+- Preferences -> Profiles -> Unnamed -> Custom font
+
