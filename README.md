@@ -34,9 +34,9 @@
 
 ## Add Display Pictures
 
-![show leaderf](images/leaderf.png)
-![show lazy](images/lazy.png)
-![show coc](images/coc.png)
+![show leaderf](images/leaderf.jpg)
+![show lazy](images/lazy.jpg)
+![show coc](images/coc.jpg)
 
 ## Install neovim
 
