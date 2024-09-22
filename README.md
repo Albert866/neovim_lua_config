@@ -7,6 +7,10 @@
 
 ```
 ├── coc-settings.json
+├── images
+│   ├── coc.png
+│   ├── lazy.png
+│   └── leaderf.png
 ├── init.lua
 ├── lazy-lock.json
 ├── lua
@@ -27,6 +31,12 @@
 │   └── plugins.lua
 └── README.md
 ```
+
+## Add Display Pictures
+
+![show1](images/leaderf.png)
+![show1](images/lazy.png)
+![show](images/coc.png)
 
 ## Install neovim
 
