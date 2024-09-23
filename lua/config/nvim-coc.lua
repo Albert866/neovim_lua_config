@@ -175,13 +175,11 @@ keyset("n", "\\k", ":<C-u>CocPrev<cr>", opts)
 keyset("n", "\\p", ":<C-u>CocListResume<cr>", opts)
 
 vim.g.coc_global_extensions = {
---    'coc-syntax',
---    'coc-snippets',
---    'coc-highlight',
---    'coc-pairs',
---    'coc-emmet',
---    'coc-yank',
---    'coc-prettier',
+    'coc-yank',
+    'coc-emmet',
+    'coc-snippets',
+    'coc-prettier',
+    'coc-highlight',
 
     'coc-html',
     'coc-css',
@@ -194,8 +192,8 @@ vim.g.coc_global_extensions = {
     'coc-markdownlint',
     'coc-cmake',
     'coc-git',
---    'coc-tsserver',
---    'coc-yaml',
---    'coc-gn',
---    'coc-vetur',
+    'coc-gn',
+    'coc-tsserver',
+    'coc-yaml',
+    'coc-vetur',
 }
