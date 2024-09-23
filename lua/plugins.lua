@@ -140,4 +140,15 @@ require('lazy').setup({
             require("config.nvim-coc")
         end,
     },
+
+    -- Install vim-gn
+    {
+        "kalcutter/vim-gn",
+    },
+
+    -- Install DoxygenToolkit.vim
+    -- :Dox to generate doxygen comment, :Dox! to update doxygen comment, :DoxLic to generate license comment, :DoxAuthor to generate author comment
+    {
+        "babaybus/DoxygenToolkit.vim",
+    },
 })
