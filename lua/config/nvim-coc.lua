@@ -38,7 +38,7 @@ keyset("i", "<cr>", [[coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r
 keyset("n", "[g", "<Plug>(coc-diagnostic-prev)", {silent = true})
 keyset("n", "]g", "<Plug>(coc-diagnostic-next)", {silent = true})
 
--- ToDo
+-- TODO
 -- GoTo code navigation
 keyset("n", "gd", "<Plug>(coc-definition)", {silent = true})
 keyset("n", "gy", "<Plug>(coc-type-definition)", {silent = true})
@@ -70,8 +70,9 @@ vim.api.nvim_create_autocmd("CursorHold", {
 keyset("n", "<leader>rn", "<Plug>(coc-rename)", {silent = true})
 
 -- Formatting selected code
-keyset("x", "<leader>gf", "<Plug>(coc-format-selected)", {silent = true})
-keyset("n", "<leader>gf", "<Plug>(coc-format-selected)", {silent = true})
+-- NOTE: Use NerdCommenter to comment visual selections
+-- keyset("x", "<leader>gf", "<Plug>(coc-format-selected)", {silent = true})
+-- keyset("n", "<leader>gf", "<Plug>(coc-format-selected)", {silent = true})
 
 -- Setup formatexpr specified filetype(s)
 vim.api.nvim_create_autocmd("FileType", {
@@ -112,14 +113,15 @@ keyset("n", "<leader>r", "<Plug>(coc-codeaction-refactor-selected)", { silent = 
 
 -- Map function and class text objects
 -- NOTE: Requires 'textDocument.documentSymbol' support from the language server
-keyset("x", "if", "<Plug>(coc-funcobj-i)", opts)
-keyset("o", "if", "<Plug>(coc-funcobj-i)", opts)
-keyset("x", "af", "<Plug>(coc-funcobj-a)", opts)
-keyset("o", "af", "<Plug>(coc-funcobj-a)", opts)
-keyset("x", "ic", "<Plug>(coc-classobj-i)", opts)
-keyset("o", "ic", "<Plug>(coc-classobj-i)", opts)
-keyset("x", "ac", "<Plug>(coc-classobj-a)", opts)
-keyset("o", "ac", "<Plug>(coc-classobj-a)", opts)
+-- NOTE: use nvim-treesitter/nvim-treesitter-textobjects implementation
+-- keyset("x", "if", "<Plug>(coc-funcobj-i)", opts)
+-- keyset("o", "if", "<Plug>(coc-funcobj-i)", opts)
+-- keyset("x", "af", "<Plug>(coc-funcobj-a)", opts)
+-- keyset("o", "af", "<Plug>(coc-funcobj-a)", opts)
+-- keyset("x", "ic", "<Plug>(coc-classobj-i)", opts)
+-- keyset("o", "ic", "<Plug>(coc-classobj-i)", opts)
+-- keyset("x", "ac", "<Plug>(coc-classobj-a)", opts)
+-- keyset("o", "ac", "<Plug>(coc-classobj-a)", opts)
 
 -- Todo
 -- Remap <C-f> and <C-b> to scroll float windows/popups
@@ -156,23 +158,23 @@ vim.opt.statusline = "%{coc#status()}%{get(b:,'coc_current_function','')}"
 -- Mappings for CoCList
 -- code actions and coc stuff
 ---@diagnostic disable-next-line: redefined-local
-local opts = {silent = true, nowait = true}
+-- local opts = {silent = true, nowait = true}
 -- Show all diagnostics
-keyset("n", "\\a", ":<C-u>CocList diagnostics<cr>", opts)
+-- keyset("n", "\\a", ":<C-u>CocList diagnostics<cr>", opts)
 -- Manage extensions
-keyset("n", "\\e", ":<C-u>CocList extensions<cr>", opts)
+-- keyset("n", "\\e", ":<C-u>CocList extensions<cr>", opts)
 -- Show commands
-keyset("n", "\\c", ":<C-u>CocList commands<cr>", opts)
+-- keyset("n", "\\c", ":<C-u>CocList commands<cr>", opts)
 -- Find symbol of current document
-keyset("n", "\\o", ":<C-u>CocList outline<cr>", opts)
+-- keyset("n", "\\o", ":<C-u>CocList outline<cr>", opts)
 -- Search workspace symbols
-keyset("n", "\\s", ":<C-u>CocList -I symbols<cr>", opts)
+-- keyset("n", "\\s", ":<C-u>CocList -I symbols<cr>", opts)
 -- Do default action for next item
-keyset("n", "\\j", ":<C-u>CocNext<cr>", opts)
+-- keyset("n", "\\j", ":<C-u>CocNext<cr>", opts)
 -- Do default action for previous item
-keyset("n", "\\k", ":<C-u>CocPrev<cr>", opts)
+-- keyset("n", "\\k", ":<C-u>CocPrev<cr>", opts)
 -- Resume latest coc list
-keyset("n", "\\p", ":<C-u>CocListResume<cr>", opts)
+-- keyset("n", "\\p", ":<C-u>CocListResume<cr>", opts)
 
 vim.g.coc_global_extensions = {
     'coc-yank',

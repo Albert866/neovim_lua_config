@@ -6,7 +6,6 @@ if not is_ok then
 	return
 end
 
--- 语法高亮，代码折叠，增量选择，代码导航
 configs.setup({
 	-- A list of parser names, or "all" (the four listed parsers should always be installed)
 	ensure_installed = {
