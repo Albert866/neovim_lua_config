@@ -58,7 +58,7 @@ require('lazy').setup({
         "lukas-reineke/indent-blankline.nvim",
         main = "ibl",
         config = function()
-            require("config.indent-blankline")
+            require("config.nvim-indent-blankline")
         end,
     },
 
@@ -157,8 +157,16 @@ require('lazy').setup({
         'iamcco/markdown-preview.nvim',
         run = 'cd app && yarn install',
         config = function()
-            require("config.markdown")
+            require("config.nvim-markdown")
         end,
         ft = { "markdown" }
     },
+
+    {
+        'stevearc/aerial.nvim',
+        config = function()
+            require('config.nvim-aerial')
+        end
+    },
+
 })
