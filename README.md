@@ -1,4 +1,5 @@
 # Lua config neovim MaxIDE
+
 ---
 
 - Developer use system: Ubuntu 22.04 LTS
@@ -34,9 +35,9 @@
 
 ## Add Display Pictures
 
-![show leaderf](images/leaderf.jpg)
-![show lazy](images/lazy.jpg)
-![show coc](images/coc.jpg)
+![show leaderf](images/leaderf_base64.txt)
+![show lazy](images/lazy_base64.txt)
+![show coc](images/coc_base64.txt)
 
 ## Install neovim
 
@@ -148,8 +149,9 @@ fc-cache -fv
 ```
 
 ### X-terminal set fonts
+
 - Preferences -> Profiles -> default -> General -> Font
 
 ### System terminal set fonts
-- Preferences -> Profiles -> Unnamed -> Custom font
 
+- Preferences -> Profiles -> Unnamed -> Custom font

@@ -147,8 +147,18 @@ require('lazy').setup({
     },
 
     -- Install DoxygenToolkit.vim
-    -- :Dox to generate doxygen comment, :Dox! to update doxygen comment, :DoxLic to generate license comment, :DoxAuthor to generate author comment
     {
         "babaybus/DoxygenToolkit.vim",
+        -- :Dox to generate doxygen comment, :Dox! to update doxygen comment, :DoxLic to generate license comment, :DoxAuthor to generate author comment
+    },
+
+	-- Markdown previewer
+    {
+        'iamcco/markdown-preview.nvim',
+        run = 'cd app && yarn install',
+        config = function()
+            require("config.markdown")
+        end,
+        ft = { "markdown" }
     },
 })
