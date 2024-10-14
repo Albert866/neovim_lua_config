@@ -152,8 +152,11 @@ require('lazy').setup({
         -- :Dox to generate doxygen comment, :Dox! to update doxygen comment, :DoxLic to generate license comment, :DoxAuthor to generate author comment
     },
 
+	-- Markdown support
+	{ "preservim/vim-markdown", ft = { "markdown" } },
 	-- Markdown previewer
     {
+        -- You need to compile it manually:cd ~/.local/share/nvim/lazy/markdown-preview.nvim/app && npm install
         'iamcco/markdown-preview.nvim',
         run = 'cd app && yarn install',
         config = function()
