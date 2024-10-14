@@ -20,7 +20,11 @@ vim.keymap.set("n", "<C-l>", "<C-w>l", opts)
 
 vim.keymap.set("n", "<leader>wj", ":split<CR> <C-W>j", opts)
 vim.keymap.set("n", "<leader>wl", ":vsplit<CR> <C-W>l", opts)
-vim.keymap.set("n", "<leader>wc", "<C-W>c", opts)
+vim.keymap.set("n", "<leader>wk", "<C-W>_", opts)
+vim.keymap.set("n", "<leader>wh", "<C-W>|", opts)
+vim.keymap.set("n", "<leader>wc", "<C-W>c", opts)  -- c : close window
+vim.keymap.set("n", "<leader>wm", "<C-W>_ <C-W>|", opts)  -- m : max window
+vim.keymap.set("n", "<leader>wr", "<C-W>=", opts)   -- r : reset window
 
 -- Resize with arrows
 -- delta: 2 lines
