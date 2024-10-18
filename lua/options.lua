@@ -3,6 +3,7 @@ vim.opt.clipboard = "unnamedplus" -- use system clipboard
 vim.opt.completeopt = { "menu", "menuone", "noselect" }
 vim.opt.mouse = "" -- "a" allow the mouse to be used in Nvim, "" disable mouse
 vim.opt.scrolloff = 10 -- no less than 10 lines even if you keep scrolling down
+vim.opt.hidden = true
 
 -- file type set
 -- file type check

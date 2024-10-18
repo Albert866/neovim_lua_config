@@ -149,6 +149,16 @@ require('lazy').setup({
     -- Install DoxygenToolkit.vim
     {
         "babaybus/DoxygenToolkit.vim",
+        config = function()
+            -- Cofnigure DoxygenToolkit.vim plugins
+            vim.cmd([[
+                augroup DoxAuthorOnNewFile
+                    autocmd!
+                    autocmd BufNewFile * :DoxLic
+                    autocmd BufNewFile * :DoxAuthor
+                augroup END
+            ]])
+        end,
         -- :Dox to generate doxygen comment, :Dox! to update doxygen comment, :DoxLic to generate license comment, :DoxAuthor to generate author comment
     },
 
