@@ -15,10 +15,14 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
-    -- Install vim-monokai colorscheme
-    {
-        "crusoexia/vim-monokai",
-    },
+    -- Base plugin
+    { "nvim-lua/plenary.nvim" }, -- 很多 lua 插件依赖的库
+    { "kyazdani42/nvim-web-devicons" }, -- display image
+    { "folke/which-key.nvim" }, -- 用于配置和提示快捷键
+    { "kkharji/sqlite.lua" }, -- sqlite
+    { "MunifTanjim/nui.nvim" }, -- GUI library
+    { "crusoexia/vim-monokai" }, -- vim-monokai colorscheme
+
     -- Better UI
     -- Run `:checkhealth noice` to check for common issues
     {
@@ -132,7 +136,31 @@ require('lazy').setup({
         event = "InsertEnter",
     },
 
-    -- Install LSP plugins
+    -- complation plugin
+    { "hrsh7th/nvim-cmp" }, -- The completion plugin
+    { "hrsh7th/cmp-buffer" }, -- buffer completions
+    { "hrsh7th/cmp-path" }, -- path completions
+    { "saadparwaiz1/cmp_luasnip" }, -- snippet completions
+    { "hrsh7th/cmp-nvim-lsp" },
+    { "hrsh7th/cmp-nvim-lua" },
+
+    -- HightLight
+    {"norcalli/nvim-colorizer.lua"}, -- display #FFFFFF
+    {"andymass/vim-matchup"}, -- hight light pair case，example: #if 和 #endif
+
+    -- code snippets
+    {
+        "L3MON4D3/LuaSnip",
+        dependencies = { "rafamadriz/friendly-snippets" },
+    },
+
+    -- lsp stronge model plugins
+    {"jackguo380/vim-lsp-cxx-highlight"}, -- ccls hight light
+    {"mattn/efm-langserver"}, -- for bash
+    {"gbrlsnchs/telescope-lsp-handlers.nvim"},
+    {"jakemason/ouroboros"}, -- quickly switch between header and source file in C/C++ project
+
+    -- coc lsp
     {
         "neoclide/coc.nvim",
         branch = "release",
@@ -140,6 +168,16 @@ require('lazy').setup({
             require("config.nvim-coc")
         end,
     },
+
+    -- lsp
+    -- { "neovim/nvim-lspconfig" }, -- enable LSP
+    -- { "williamboman/mason.nvim" }, -- simple to use language server installer
+    -- { "williamboman/mason-lspconfig.nvim" },
+    -- { "nvimtools/none-ls.nvim" }, -- for formatters and linters
+    -- { "j-hui/fidget.nvim", tag = "legacy" },
+    -- { "SmiteshP/nvim-navic" }, -- 在 winbar 展示当前的路径
+    -- { "utilyre/barbecue.nvim" },
+    -- { "kosayoda/nvim-lightbulb" }, -- 右下角展示索引的进度
 
     -- Install vim-gn
     {
@@ -150,16 +188,15 @@ require('lazy').setup({
     {
         "babaybus/DoxygenToolkit.vim",
         config = function()
-            -- Cofnigure DoxygenToolkit.vim plugins
+            -- Doxygen Toolkit configuration
+            require("config.doxygen_toolkit")
             vim.cmd([[
                 augroup DoxAuthorOnNewFile
                     autocmd!
                     autocmd BufNewFile * :DoxLic
-                    autocmd BufNewFile * :DoxAuthor
                 augroup END
             ]])
         end,
-        -- :Dox to generate doxygen comment, :Dox! to update doxygen comment, :DoxLic to generate license comment, :DoxAuthor to generate author comment
     },
 
 	-- Markdown support
