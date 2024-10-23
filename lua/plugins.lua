@@ -16,9 +16,9 @@ vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
     -- Base plugin
-    { "nvim-lua/plenary.nvim" }, -- 很多 lua 插件依赖的库
+    { "nvim-lua/plenary.nvim" }, -- lua plugins library
     { "kyazdani42/nvim-web-devicons" }, -- display image
-    { "folke/which-key.nvim" }, -- 用于配置和提示快捷键
+    { "folke/which-key.nvim" }, -- configure and prompt shortcut keys
     { "kkharji/sqlite.lua" }, -- sqlite
     { "MunifTanjim/nui.nvim" }, -- GUI library
     { "crusoexia/vim-monokai" }, -- vim-monokai colorscheme
@@ -130,8 +130,7 @@ require('lazy').setup({
 
     -- Install github copilot
     {
-        -- github copilot: https://docs.github.com/en/copilot/getting-started-with-github-copilot?tool=vimneovim
-        -- https://github.com/github/copilot.vim.git  :Copilot setup   :Copilot enable/disable/status
+        -- Copilot setup/enable/disable/status
         "github/copilot.vim",
         event = "InsertEnter",
     },
@@ -193,7 +192,7 @@ require('lazy').setup({
             vim.cmd([[
                 augroup DoxAuthorOnNewFile
                     autocmd!
-                    autocmd BufNewFile * :DoxLic
+                    autocmd BufNewFile *.cpp,*.cc,*.c,*.h,*.hpp :DoxLic
                 augroup END
             ]])
         end,
@@ -212,6 +211,7 @@ require('lazy').setup({
         ft = { "markdown" }
     },
 
+    -- same ctags vista, Right display type list
     {
         'stevearc/aerial.nvim',
         config = function()
