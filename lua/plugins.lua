@@ -17,11 +17,11 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup({
     -- Base plugin
     { "nvim-lua/plenary.nvim" }, -- lua plugins library
-    { "kyazdani42/nvim-web-devicons" }, -- display image
     { "folke/which-key.nvim" }, -- configure and prompt shortcut keys
     { "kkharji/sqlite.lua" }, -- sqlite
     { "MunifTanjim/nui.nvim" }, -- GUI library
     { "crusoexia/vim-monokai" }, -- vim-monokai colorscheme
+    { "kyazdani42/nvim-web-devicons" }, -- display image
 
     -- Better UI
     -- Run `:checkhealth noice` to check for common issues
@@ -94,7 +94,9 @@ require('lazy').setup({
     -- Install vim-airline and vim-airline-themes
     {
         "vim-airline/vim-airline",
-        dependencies = 'vim-airline/vim-airline-themes',
+        dependencies = {
+            'vim-airline/vim-airline-themes',
+        },
         config = function()
             require("config.airline")
         end,
@@ -104,7 +106,7 @@ require('lazy').setup({
     {
         "preservim/nerdtree",
         dependencies = {
-            'ryanoasis/vim-devicons',
+            'ryanoasis/vim-devicons',  -- display image for tree
             'Xuyuanp/nerdtree-git-plugin',
         },
         config = function()

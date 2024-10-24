@@ -5,10 +5,12 @@ vim.g.airline_powerline_fonts = 1
 vim.g.airline_theme = "desertink"
 
 -- enable tabline extern
+vim.g['webdevicons_enable_airline_tabline'] = 1
+vim.g['webdevicons_enable_airline_bufferline'] = 1
 vim.g['airline#extensions#tabline#enabled'] = 1
 vim.g['airline#extensions#tabline#left_alt_sep'] = '|'
 vim.g['airline#extensions#tabline#buffer_nr_show'] = 0
-vim.g['airline#extensions#tabline#formatter'] = 'default'
+vim.g['airline#extensions#tabline#formatter'] = 'unique_tail'  -- unique_tail is only display filename, default is display all
 
 -- enable keymap extern
 vim.g['airline#extensions#keymap#enabled'] = 1
