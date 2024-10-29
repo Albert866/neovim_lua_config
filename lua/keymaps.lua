@@ -36,6 +36,8 @@ vim.keymap.set("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 -- nnoremap <leader><Tab> <C-^>
 vim.keymap.set("n", "<leader><Tab>", "<C-^>", opts)
 
+vim.keymap.set("n", "<leader>n", ":bn<CR>", opts)
+vim.keymap.set("n", "<leader>p", ":bp<CR>", opts)
 -----------------
 -- Visual mode --
 -----------------
