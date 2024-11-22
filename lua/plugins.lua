@@ -134,7 +134,6 @@ require('lazy').setup({
     {
         -- Copilot setup/enable/disable/status
         "github/copilot.vim",
-        event = "InsertEnter",
     },
 
     -- complation plugin
