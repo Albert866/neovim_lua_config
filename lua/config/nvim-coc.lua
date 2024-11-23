@@ -71,8 +71,8 @@ keyset("n", "<leader>rn", "<Plug>(coc-rename)", {silent = true})
 
 -- Formatting selected code
 -- NOTE: Use NerdCommenter to comment visual selections
--- keyset("x", "<leader>gf", "<Plug>(coc-format-selected)", {silent = true})
--- keyset("n", "<leader>gf", "<Plug>(coc-format-selected)", {silent = true})
+keyset("x", "<leader>gf", "<Plug>(coc-format-selected)", {silent = true})
+keyset("n", "<leader>gf", "<Plug>(coc-format-selected)", {silent = true})
 
 -- Setup formatexpr specified filetype(s)
 vim.api.nvim_create_autocmd("FileType", {
