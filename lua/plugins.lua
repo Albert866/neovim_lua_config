@@ -21,7 +21,13 @@ require('lazy').setup({
     { "kkharji/sqlite.lua" }, -- sqlite
     { "MunifTanjim/nui.nvim" }, -- GUI library
     { "crusoexia/vim-monokai" }, -- vim-monokai colorscheme
-    { "kyazdani42/nvim-web-devicons" }, -- display image
+
+    {
+        "kyazdani42/nvim-web-devicons",
+        config = function()
+            require("config.nvim-web-devicons")
+        end,
+    },
 
     -- Better UI
     -- Run `:checkhealth noice` to check for common issues

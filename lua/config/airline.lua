@@ -4,17 +4,6 @@
 vim.g.airline_powerline_fonts = 1
 vim.g.airline_theme = "desertink"
 
--- Custom function to get file type symbol
-function WebDevIconsGetFileTypeSymbol()
-  local filename = vim.fn.expand('%:t')
-  local extension = vim.fn.expand('%:e')
-  local icon = require'nvim-web-devicons'.get_icon(filename, extension, {default = true})
-  return icon
-end
-
--- Configure airline to use the custom function
-vim.g.airline_section_b = '%{v:lua.WebDevIconsGetFileTypeSymbol()} %f'
-
 -- enable tabline extern
 vim.g['webdevicons_enable_airline_tabline'] = 1
 vim.g['webdevicons_enable_airline_bufferline'] = 1

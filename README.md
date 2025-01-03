@@ -2,7 +2,7 @@
 
 ---
 
-- Developer use system: Ubuntu 22.04 LTS
+- Developer use system: Ubuntu version greater than 20.04 LTS
 
 ## tree
 
@@ -43,7 +43,7 @@
 
 ## Install neovim
 
-- neovim stable version greater than 0.8.0
+- neovim stable version greater than 0.9.0
 
 ```bash
 sudo add-apt-repository ppa:neovim-ppa/stable -y # OR sudo add-apt-repository ppa:neovim-ppa/unstable -y
@@ -64,7 +64,7 @@ https://github.com/neovim/neovim/releases
 - nodejs version greater than 16.0
 
 ```bash
-curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_20.x | sudo -E bash -
 sudo apt-get install -y nodejs
 node --version
 ```
