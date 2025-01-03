@@ -23,10 +23,12 @@ require('lazy').setup({
     { "crusoexia/vim-monokai" }, -- vim-monokai colorscheme
 
     {
-        "kyazdani42/nvim-web-devicons",
-        config = function()
-            require("config.nvim-web-devicons")
-        end,
+        "nvim-tree/nvim-web-devicons",
+        opt = {
+            color_icons = true,
+            default = true,
+            strict = true,
+        },
     },
 
     -- Better UI
