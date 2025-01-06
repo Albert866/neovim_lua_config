@@ -168,6 +168,9 @@
         },
         "highlight": {
           "lsRanges": true
+        },
+        "clang": {
+          "extraArgs": ["--std=c++17"]
         }
       }
     }
