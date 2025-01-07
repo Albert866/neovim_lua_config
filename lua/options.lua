@@ -32,7 +32,6 @@ vim.opt.splitbelow = true -- open new vertical split bottom
 vim.opt.splitright = true -- open new horizontal splits right
 vim.opt.termguicolors = true -- enabl 24-bit RGB color in the TUI
 vim.opt.showmode = false -- we are experienced, wo don't need the "-- INSERT --" mode hint
-vim.opt.clipboard = 'unnamedplus' -- system clipboard
 vim.opt.compatible = false -- disable vi compatibility mode
 vim.opt.laststatus = 2
 
