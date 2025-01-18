@@ -110,17 +110,26 @@ require('lazy').setup({
         end,
     },
 
-    -- Install nerd tree
-    {
-        "preservim/nerdtree",
-        dependencies = {
-            'ryanoasis/vim-devicons',  -- display image for tree
-            'Xuyuanp/nerdtree-git-plugin',
-        },
-        config = function()
-            require("config.nerdtree")
-        end,
-    },
+	-- Status line
+	-- {
+	--     "nvim-lualine/lualine.nvim",
+	--     dependencies = { "nvim-tree/nvim-web-devicons" },
+	--     config = function()
+	--         require("config.lualine")
+	--     end,
+	-- },
+
+	-- File explorer
+	{
+		"nvim-tree/nvim-tree.lua",
+		dependencies = {
+			"nvim-tree/nvim-web-devicons", -- optional, for file icons
+		},
+		config = function()
+			require("config.nvim-tree")
+		end,
+	},
+
     -- Install nerd commenter
     {
         'scrooloose/nerdcommenter',

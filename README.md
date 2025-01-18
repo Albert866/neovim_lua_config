@@ -18,12 +18,15 @@
 │   ├── colorscheme.lua
 │   ├── config
 │   │   ├── airline.lua
-│   │   ├── indent-blankline.lua
+│   │   ├── doxygen_toolkit.lua
 │   │   ├── leaderf.lua
 │   │   ├── nerdcommenter.lua
-│   │   ├── nerdtree.lua
+│   │   ├── nvim-aerial.lua
 │   │   ├── nvim-autopairs.lua
 │   │   ├── nvim-coc.lua
+│   │   ├── nvim-indent-blankline.lua
+│   │   ├── nvim-markdown.lua
+│   │   ├── nvim-tree.lua
 │   │   ├── nvim-treesitter.lua
 │   │   ├── nvim-treesitter-textobjects.lua
 │   │   └── nvim-ts-rainbow.lua
@@ -139,14 +142,26 @@ ccls --version
 
 ## Set terminal fonts
 
+- Install nerd-fonts
+
 ```bash
 # download FiraCode Nerd Font
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/FiraCode.zip
 
 # unzip fonts
 unzip FiraCode.zip -d ~/.local/share/fonts
 
 # flush fonts cache
+fc-cache -fv
+```
+
+- Terminal set fonts (`FiraCode Nerd Font Light 13`)
+
+OR
+
+```bash
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/Hasklig.zip
+unzip Hasklig.zip -d ~/.local/share/fonts
 fc-cache -fv
 ```
 
