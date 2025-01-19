@@ -4,13 +4,13 @@ if not is_ok then
 end
 
 -- :NvimTreeToggle Open or close the tree. Takes an optional path argument.
-vim.keymap.set("n", "<leader>et", ":NvimTreeToggle<CR>", opts)
+vim.keymap.set("n", "<leader>tt", ":NvimTreeToggle<CR>", opts)
 -- :NvimTreeFocus Open the tree if it is closed, and then focus on the tree.
-vim.keymap.set("n", "<leader>ee", ":NvimTreeFocus<CR>", opts)
+vim.keymap.set("n", "<leader>te", ":NvimTreeFocus<CR>", opts)
 -- :NvimTreeFindFile Move the cursor in the tree for the current buffer, opening folders if needed.
-vim.keymap.set("n", "<leader>ef", ":NvimTreeFindFile<CR>", opts)
+vim.keymap.set("n", "<leader>tf", ":NvimTreeFindFile<CR>", opts)
 -- :NvimTreeCollapse Collapses the nvim-tree recursively.
-vim.keymap.set("n", "<leader>ec", ":NvimTreeCollapse<CR>", opts)
+vim.keymap.set("n", "<leader>tc", ":NvimTreeCollapse<CR>", opts)
 
 --
 -- This function has been generated from your
@@ -108,7 +108,6 @@ end
 nvim_tree.setup({
 	sort_by = "case_sensitive",
 	on_attach = on_attach,
-    auto_close = true,
     view = {
       width = 30,
       side = 'left',

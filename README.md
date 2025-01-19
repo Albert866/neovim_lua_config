@@ -6,7 +6,7 @@
 
 ## tree
 
-```
+```text
 ├── coc-settings.json
 ├── images
 │   ├── coc.png
@@ -49,7 +49,8 @@
 - neovim stable version greater than 0.9.0
 
 ```bash
-sudo add-apt-repository ppa:neovim-ppa/stable -y # OR sudo add-apt-repository ppa:neovim-ppa/unstable -y
+sudo add-apt-repository ppa:neovim-ppa/stable -y
+# OR sudo add-apt-repository ppa:neovim-ppa/unstable -y
 sudo apt update
 sudo apt-get install -y neovim
 neovim --version
