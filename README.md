@@ -104,6 +104,13 @@ pip3 install pynvim
 pip3 install --upgrade pynvim
 ```
 
+## Install ctags
+
+```bash
+sudo apt-get install -y universal-ctags
+ctags --version
+```
+
 ## Install clang and Set clang as default compiler
 
 ```bash

@@ -33,11 +33,14 @@ vim.keymap.set("n", "<C-Down>", ":resize +2<CR>", opts)
 vim.keymap.set("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 vim.keymap.set("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
--- nnoremap <leader><Tab> <C-^>
+-- switch between last two buffers
 vim.keymap.set("n", "<leader><Tab>", "<C-^>", opts)
-
+-- switch next/previous buffer
 vim.keymap.set("n", "<leader>n", ":bn<CR>", opts)
 vim.keymap.set("n", "<leader>p", ":bp<CR>", opts)
+-- close current buffer
+vim.keymap.set('n', '<leader>q', ':bp<CR>:bd #<CR>', opts)
+
 -----------------
 -- Visual mode --
 -----------------

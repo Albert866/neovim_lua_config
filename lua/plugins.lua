@@ -20,7 +20,13 @@ require('lazy').setup({
     { "folke/which-key.nvim" }, -- configure and prompt shortcut keys
     { "kkharji/sqlite.lua" }, -- sqlite
     { "MunifTanjim/nui.nvim" }, -- GUI library
+    -- colorscheme
     { "crusoexia/vim-monokai" }, -- vim-monokai colorscheme
+    { "morhetz/gruvbox"},
+    { "folke/tokyonight.nvim"},
+    { "EdenEast/nightfox.nvim"},
+    { "sainnhe/everforest"},
+    { "joshdick/onedark.vim"},
 
     {
         "nvim-tree/nvim-web-devicons",
@@ -99,25 +105,14 @@ require('lazy').setup({
         end,
     },
 
-    -- Install vim-airline and vim-airline-themes
+	-- Status line
     {
-        "vim-airline/vim-airline",
-        dependencies = {
-            'vim-airline/vim-airline-themes',
-        },
+        "nvim-lualine/lualine.nvim",
+        dependencies = { "nvim-tree/nvim-web-devicons" },
         config = function()
-            require("config.airline")
+            require("config.nvim-lualine")
         end,
     },
-
-	-- Status line
-	-- {
-	--     "nvim-lualine/lualine.nvim",
-	--     dependencies = { "nvim-tree/nvim-web-devicons" },
-	--     config = function()
-	--         require("config.lualine")
-	--     end,
-	-- },
 
 	-- File explorer
 	{

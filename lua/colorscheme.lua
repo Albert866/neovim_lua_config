@@ -1,4 +1,5 @@
 -- define your colorscheme here
+-- monokai/gruvbox/onedark/nightfox/everforest/tokyonight
 local colorscheme = 'monokai'
 
 local is_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
