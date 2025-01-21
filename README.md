@@ -46,15 +46,17 @@
 
 ## Install neovim
 
-- neovim stable version greater than 0.9.0
+- neovim stable version greater than 0.10.0
 
 ```bash
 sudo add-apt-repository ppa:neovim-ppa/stable -y
 # OR sudo add-apt-repository ppa:neovim-ppa/unstable -y
-sudo apt update
+sudo apt-get update
 sudo apt-get install -y neovim
-neovim --version
+nvim --version
 ```
+
+OR
 
 - Download neovim appimage and Install
 
@@ -163,7 +165,7 @@ unzip FiraCode.zip -d ~/.local/share/fonts
 fc-cache -fv
 ```
 
-- Terminal set fonts (`FiraCode Nerd Font Light 13`)
+- Terminal set fonts (`FiraCode Nerd Font Mono Regular 13`)
 
 OR
 
