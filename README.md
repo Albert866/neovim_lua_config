@@ -182,3 +182,53 @@ fc-cache -fv
 ### System terminal set fonts
 
 - Preferences -> Profiles -> Unnamed -> Custom font
+
+## Config neovim
+
+- Clone neovim config
+
+```bash
+cd ~/tools
+git clone git@github.com:Albert866/neovim_lua_config.git
+cd ~/.config
+ln -s ~/tools/neovim_lua_config/ nvim
+```
+
+- Auto install plugins
+
+  - > Open neovim `nvim`
+
+- check health in neovim
+
+```bash
+:checkhealth
+```
+
+## Make compile_commands.json
+
+---
+
+### Makefile project
+
+- sudo apt-get install -y bear
+- Run `bear -- make`
+
+### CMake project
+
+```bash
+cmake -S . -B build -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+cmake --build build
+```
+
+OR into CMakeLists.txt file
+
+```bash
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+```
+
+### ninja project
+
+```bash
+gn gen out
+ninja -C out -t compdb cc cxx > compile_commands.json
+```

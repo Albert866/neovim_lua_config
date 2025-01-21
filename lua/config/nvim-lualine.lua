@@ -17,9 +17,9 @@ lualine.setup({
 		always_divide_middle = true,
 		globalstatus = false,
 		refresh = {
-			statusline = 1000,
-			tabline = 1000,
-			winbar = 1000,
+			statusline = 100,
+			tabline = 100,
+			winbar = 100,
 		},
 	},
 	-- Lualine has sections as shown below.
@@ -29,11 +29,7 @@ lualine.setup({
 	-- Each section holds its components
 	sections = {
 		lualine_a = { "mode" },
-		lualine_b = {
-			"branch",
-			"diff",
-			"diagnostics",
-		},
+        lualine_b = {'branch', 'diff', 'diagnostics'},
 		lualine_c = {
 			{
 				"filename",
@@ -48,7 +44,8 @@ lualine.setup({
 				shorting_target = 40, -- Shortens path to leave 40 spaces in the window
 			},
 		},
-		lualine_x = { "encoding", "filesize", "filetype" },
+        lualine_x = { "encoding", "filesize", "filetype" },
+        -- lualine_x = {'encoding', 'fileformat', 'filetype'},
 		lualine_y = { "progress" },
 		lualine_z = { "location" },
 	},
@@ -61,12 +58,12 @@ lualine.setup({
 		lualine_z = {},
 	},
     tabline = {
-        lualine_a = {'buffers'},
-        lualine_b = {},
-        lualine_c = {},
-        lualine_x = {},
-        lualine_y = {},
-        lualine_z = {'tabs'}
+        lualine_a = { 'buffers' },
+        lualine_b = { 'fileformat' },
+        lualine_c = { 'filename' },
+        lualine_x = { 'progress' },
+        lualine_y = { 'location' },
+        lualine_z = { 'tabs' }
     },
     winbar = {},
     inactive_winbar = {},

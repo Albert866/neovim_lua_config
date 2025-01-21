@@ -14,7 +14,7 @@ vim.g.DoxygenToolkit_licenseBrief = "Apache License 2.0"
 vim.g.DoxygenToolkit_licenseTag = table.concat({
     '',
     '    Copyright (c) 2021-2022 Project CHIP Authors',
-    '    Copyright (c) 2019 Google LLC.',
+    '    Copyright (c) 2022 OpenSources LLC.',
     '    All rights reserved.',
     '',
     '    Licensed under the Apache License, Version 2.0 (the "License");',
