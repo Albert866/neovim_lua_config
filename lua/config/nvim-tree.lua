@@ -114,6 +114,7 @@ nvim_tree.setup({
     },
 	renderer = {
 		group_empty = true,
+        root_folder_modifier = ':t',  -- This shows only the folder name
 	},
 	filters = {
 		dotfiles = true,
