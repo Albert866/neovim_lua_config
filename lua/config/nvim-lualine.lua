@@ -60,7 +60,7 @@ lualine.setup({
     tabline = {
         lualine_a = { 'buffers' },
         lualine_b = { 'fileformat' },
-        lualine_c = { 'filename' },
+        lualine_c = { 'filetype' },
         lualine_x = { 'progress' },
         lualine_y = { 'location' },
         lualine_z = { 'tabs' }

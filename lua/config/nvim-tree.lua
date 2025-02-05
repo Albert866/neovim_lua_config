@@ -122,6 +122,15 @@ nvim_tree.setup({
 	diagnostics = {
 		enable = true,
 	},
+    git = {
+        enable = true,
+        ignore = false,  -- Ensure git ignored files are shown
+    },
+    update_focused_file = {
+        enable = true,
+        update_cwd = true,
+        ignore_list = {},
+    },
 })
 
 -- auto open nvim-tree
