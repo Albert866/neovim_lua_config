@@ -106,7 +106,9 @@
     "py",
     "cs",
     "gn",
-    "gni"
+    "gni",
+    "lua",
+    "rust"
   ],
 
   "python.format.enable": true,
@@ -171,7 +173,40 @@
           "lsRanges": true
         },
         "clang": {
-          "extraArgs": ["--std=c++17"]
+          "extraArgs": ["--std=c++17"],
+          "tidy": {
+            "enable": true,
+            "checks": "*",
+            "warningsAsErrors": []
+          }
+        }
+      }
+    },
+    "lua": {
+      "command": "lua-language-server",
+      "filetypes": ["lua"],
+      "rootPatterns": [".git/"],
+      "settings": {
+        "Lua": {
+          "runtime": {
+            "version": "LuaJIT",
+            "path": ["?.lua", "?/init.lua", "?/?.lua"]
+          },
+          "diagnostics": {
+            "globals": ["vim"]
+          },
+          "workspace": {
+            "library": [
+              "/lib/share/lua/5.1",
+              "/lib/share/lua/5.2",
+              "/lib/share/lua/5.3",
+              "/lib/share/lua/5.4",
+              "/lib/x86_64-linux-gnu"
+            ]
+          },
+          "telemetry": {
+            "enable": false
+          }
         }
       }
     }
