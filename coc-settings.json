@@ -176,12 +176,15 @@
           "extraArgs": [
             "--std=c++17",
             // x86_64-linux-gnu
+            "-I/usr/include",
             "-I/usr/include/x86_64-linux-gnu",
-            "-I/usr/include/x86_64-linux-gnu/c++/12",
+            "-I/usr/include/c++/12",
             // aarch64-linux-gnu
             "-I/usr/aarch64-linux-gnu/include",
+            "-I/usr/aarch64-linux-gnu/include/c++/11",
             // arm-linux-gnueabihf
-            "-I/usr/arm-linux-gnueabihf/include"
+            "-I/usr/arm-linux-gnueabihf/include",
+            "-I/usr/arm-linux-gnueabihf/include/c++/11"
           ],
           "tidy": {
             "enable": true,
