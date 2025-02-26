@@ -173,7 +173,16 @@
           "lsRanges": true
         },
         "clang": {
-          "extraArgs": ["--std=c++17"],
+          "extraArgs": [
+            "--std=c++17",
+            // x86_64-linux-gnu
+            "-I/usr/include/x86_64-linux-gnu",
+            "-I/usr/include/x86_64-linux-gnu/c++/12",
+            // aarch64-linux-gnu
+            "-I/usr/aarch64-linux-gnu/include",
+            // arm-linux-gnueabihf
+            "-I/usr/arm-linux-gnueabihf/include"
+          ],
           "tidy": {
             "enable": true,
             "checks": "*",
