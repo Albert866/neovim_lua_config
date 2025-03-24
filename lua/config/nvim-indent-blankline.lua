@@ -3,7 +3,7 @@
 local is_ok, indent_blankline = pcall(require, "ibl")
 if not is_ok then
     print("The ibl not find!!!")
-	return
+    return
 end
 
 -- For all available options, take a look at `:help ibl.config.`

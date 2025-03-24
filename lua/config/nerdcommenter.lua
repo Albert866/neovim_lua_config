@@ -1,4 +1,3 @@
-
 -- Create default mappings
 vim.g.NERDCreateDefaultMappings = 1
 
@@ -23,16 +22,16 @@ vim.g.NERDCommentEmptyLines = 1
 -- Enable trimming of trailing whitespace when uncommenting
 vim.g.NERDTrimTrailingWhitespace = 1
 
--- Enable NERDCommenterToggle to check all selected lines is commented or not 
+-- Enable NERDCommenterToggle to check all selected lines is commented or not
 vim.g.NERDToggleCheckAllLines = 1
 
 -- Define a function to simplify key mappings
 local function map(mode, lhs, rhs, opts)
-  local options = { noremap = true, silent = true }
-  if opts then
-    options = vim.tbl_extend('force', options, opts)
-  end
-  vim.api.nvim_set_keymap(mode, lhs, rhs, options)
+    local options = { noremap = true, silent = true }
+    if opts then
+        options = vim.tbl_extend('force', options, opts)
+    end
+    vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
 -- Create key mappings for nerdcommenter
