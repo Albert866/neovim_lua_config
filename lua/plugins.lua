@@ -17,16 +17,17 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup({
     -- Base plugin
     { "nvim-lua/plenary.nvim" }, -- lua plugins library
-    { "folke/which-key.nvim" }, -- configure and prompt shortcut keys
-    { "kkharji/sqlite.lua" }, -- sqlite
-    { "MunifTanjim/nui.nvim" }, -- GUI library
+    { "folke/which-key.nvim" },  -- configure and prompt shortcut keys
+    { "kkharji/sqlite.lua" },    -- sqlite
+    { "MunifTanjim/nui.nvim" },  -- GUI library
     -- colorscheme
     { "crusoexia/vim-monokai" }, -- vim-monokai colorscheme
-    { "morhetz/gruvbox"},
-    { "folke/tokyonight.nvim"},
-    { "EdenEast/nightfox.nvim"},
-    { "sainnhe/everforest"},
-    { "joshdick/onedark.vim"},
+    { "morhetz/gruvbox" },
+    { "folke/tokyonight.nvim" },
+    { "EdenEast/nightfox.nvim" },
+    { "joshdick/onedark.vim" },
+    { "marko-cerovac/material.nvim" },
+
 
     {
         "nvim-tree/nvim-web-devicons",
@@ -105,7 +106,7 @@ require('lazy').setup({
         end,
     },
 
-	-- Status line
+    -- Status line
     {
         "nvim-lualine/lualine.nvim",
         dependencies = { "nvim-tree/nvim-web-devicons" },
@@ -114,16 +115,16 @@ require('lazy').setup({
         end,
     },
 
-	-- File explorer
-	{
-		"nvim-tree/nvim-tree.lua",
-		dependencies = {
-			"nvim-tree/nvim-web-devicons", -- optional, for file icons
-		},
-		config = function()
-			require("config.nvim-tree")
-		end,
-	},
+    -- File explorer
+    {
+        "nvim-tree/nvim-tree.lua",
+        dependencies = {
+            "nvim-tree/nvim-web-devicons", -- optional, for file icons
+        },
+        config = function()
+            require("config.nvim-tree")
+        end,
+    },
 
     -- Install nerd commenter
     {
@@ -149,16 +150,16 @@ require('lazy').setup({
     },
 
     -- complation plugin
-    { "hrsh7th/nvim-cmp" }, -- The completion plugin
-    { "hrsh7th/cmp-buffer" }, -- buffer completions
-    { "hrsh7th/cmp-path" }, -- path completions
+    { "hrsh7th/nvim-cmp" },         -- The completion plugin
+    { "hrsh7th/cmp-buffer" },       -- buffer completions
+    { "hrsh7th/cmp-path" },         -- path completions
     { "saadparwaiz1/cmp_luasnip" }, -- snippet completions
     { "hrsh7th/cmp-nvim-lsp" },
     { "hrsh7th/cmp-nvim-lua" },
 
     -- HightLight
-    {"norcalli/nvim-colorizer.lua"}, -- display #FFFFFF
-    {"andymass/vim-matchup"}, -- hight light pair case，example: #if 和 #endif
+    { "norcalli/nvim-colorizer.lua" }, -- display #FFFFFF
+    { "andymass/vim-matchup" },        -- hight light pair case，example: #if 和 #endif
 
     -- code snippets
     {
@@ -167,10 +168,10 @@ require('lazy').setup({
     },
 
     -- lsp stronge model plugins
-    {"jackguo380/vim-lsp-cxx-highlight"}, -- ccls hight light
-    {"mattn/efm-langserver"}, -- for bash
-    {"gbrlsnchs/telescope-lsp-handlers.nvim"},
-    {"jakemason/ouroboros"}, -- quickly switch between header and source file in C/C++ project
+    { "jackguo380/vim-lsp-cxx-highlight" }, -- ccls hight light
+    { "mattn/efm-langserver" },             -- for bash
+    { "gbrlsnchs/telescope-lsp-handlers.nvim" },
+    { "jakemason/ouroboros" },              -- quickly switch between header and source file in C/C++ project
 
     -- coc lsp
     {
@@ -211,9 +212,9 @@ require('lazy').setup({
         end,
     },
 
-	-- Markdown support
-	{ "preservim/vim-markdown", ft = { "markdown" } },
-	-- Markdown previewer
+    -- Markdown support
+    { "preservim/vim-markdown", ft = { "markdown" } },
+    -- Markdown previewer
     {
         -- You need to compile it manually:cd ~/.local/share/nvim/lazy/markdown-preview.nvim/app && npm install
         'iamcco/markdown-preview.nvim',

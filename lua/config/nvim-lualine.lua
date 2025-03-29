@@ -17,9 +17,9 @@ lualine.setup({
         always_divide_middle = true,
         globalstatus = false,
         refresh = {
-            statusline = 100,
-            tabline = 100,
-            winbar = 100,
+            statusline = 200,
+            tabline = 200,
+            winbar = 200,
         },
     },
     -- Lualine has sections as shown below.
