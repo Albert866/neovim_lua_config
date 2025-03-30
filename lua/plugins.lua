@@ -170,7 +170,6 @@ require('lazy').setup({
     -- lsp stronge model plugins
     { "jackguo380/vim-lsp-cxx-highlight" }, -- ccls hight light
     { "mattn/efm-langserver" },             -- for bash
-    { "gbrlsnchs/telescope-lsp-handlers.nvim" },
     { "jakemason/ouroboros" },              -- quickly switch between header and source file in C/C++ project
 
     -- coc lsp

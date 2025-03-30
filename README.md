@@ -11,13 +11,13 @@
 ├── images
 │   ├── coc.png
 │   ├── lazy.png
-│   └── leaderf.png
+│   ├── leaderf_file.png
+│   └── leaderf_func.png
 ├── init.lua
 ├── lazy-lock.json
 ├── lua
 │   ├── colorscheme.lua
 │   ├── config
-│   │   ├── airline.lua
 │   │   ├── doxygen_toolkit.lua
 │   │   ├── leaderf.lua
 │   │   ├── nerdcommenter.lua
@@ -25,6 +25,7 @@
 │   │   ├── nvim-autopairs.lua
 │   │   ├── nvim-coc.lua
 │   │   ├── nvim-indent-blankline.lua
+│   │   ├── nvim-lualine.lua
 │   │   ├── nvim-markdown.lua
 │   │   ├── nvim-tree.lua
 │   │   ├── nvim-treesitter.lua
@@ -38,11 +39,13 @@
 
 ## Add Display Pictures
 
-![show leaderf](./images/leaderf.png)
+![show leaderf find files](./images/leaderf_file.png)
+
+![show leaderf find function](./images/leaderf_func.png)
 
 ![show lazy](./images/lazy.png)
 
-![show coc](./images/coc.png)
+![show coc lsp](./images/coc.png)
 
 ## Install neovim
 
@@ -65,9 +68,15 @@ OR
 https://github.com/neovim/neovim/releases
 ```
 
+## Install lua and luarocks
+
+```bash
+sudo apt-get install -y lua5.1 luarocks
+```
+
 ## Install nodejs
 
-- nodejs version greater than 16.0
+- nodejs version greater than 18.0
 
 ```bash
 curl -sL https://deb.nodesource.com/setup_20.x | sudo -E bash -
