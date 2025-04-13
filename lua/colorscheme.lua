@@ -129,7 +129,7 @@ local palettes = {
 }
 
 -- Choose your preferred palette
-local selected_palette = palettes.soda -- Change this to 'classic', 'pro', 'soda', or 'ristretto'
+local selected_palette = palettes.classic -- Change this to 'classic', 'pro', 'soda', or 'ristretto'
 
 -- Apply custom highlights
 local function applay_palette(palette)
