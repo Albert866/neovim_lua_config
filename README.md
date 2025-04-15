@@ -71,7 +71,7 @@ https://github.com/neovim/neovim/releases
 ## Install lua and luarocks
 
 ```bash
-sudo apt-get install -y lua5.1 luarocks
+sudo apt-get install -y lua5.1 lua5.3 luarocks
 ```
 
 ## Install nodejs
@@ -109,7 +109,7 @@ yarn --version
 ```bash
 sudo apt-get install -y python3 python3-venv python3-dev python3-pip python3-neovim
 python3 --version
-pip3 install --upgrade pip
+pip3 install --upgrade pip [--break-system-packages]
 pip3 --version
 pip3 install pynvim
 pip3 install --upgrade pynvim
@@ -184,11 +184,12 @@ unzip Hasklig.zip -d ~/.local/share/fonts
 fc-cache -fv
 ```
 
-### X-terminal set fonts
+### terminator set fonts
 
+- `sudo apt-get install -y terminator`
 - Preferences -> Profiles -> default -> General -> Font
 
-### System terminal set fonts
+### System default ubuntu terminal set fonts
 
 - Preferences -> Profiles -> Unnamed -> Custom font
 
