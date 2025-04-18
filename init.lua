@@ -4,7 +4,7 @@ require("options")
 -- load keymappings
 require("keymaps")
 
--- load Packervim
+-- load lazy.nvim (plugin manager)
 require("plugins")
 
 -- Set colorscheme
