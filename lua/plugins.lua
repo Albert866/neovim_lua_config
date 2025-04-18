@@ -22,12 +22,8 @@ require('lazy').setup({
     { "MunifTanjim/nui.nvim" },  -- GUI library
     -- colorscheme
     { "crusoexia/vim-monokai" }, -- vim-monokai colorscheme
-    { "morhetz/gruvbox" },
-    { "folke/tokyonight.nvim" },
-    { "EdenEast/nightfox.nvim" },
-    { "joshdick/onedark.vim" },
+    -- { "tanvirtin/monokai.nvim" },
     { "marko-cerovac/material.nvim" },
-
 
     {
         "nvim-tree/nvim-web-devicons",
@@ -173,6 +169,9 @@ require('lazy').setup({
     { "jakemason/ouroboros" },              -- quickly switch between header and source file in C/C++ project
 
     -- coc lsp
+    -- npm install -g typescript typescript-language-server
+    -- npm install -g pyright
+    -- npm install -g bash-language-server
     {
         "neoclide/coc.nvim",
         branch = "release",

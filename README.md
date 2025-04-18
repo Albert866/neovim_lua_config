@@ -157,6 +157,11 @@ clang++ -v
 ```bash
 sudo apt-get install -y ccls
 ccls --version
+# If use coc.nvim, install ccls by npm language server
+npm install -g typescript typescript-language-server
+npm install -g pyright
+npm install -g bash-language-server
+npm install -g vscode-languageserver-types
 ```
 
 ## Set terminal fonts
@@ -184,7 +189,7 @@ unzip Hasklig.zip -d ~/.local/share/fonts
 fc-cache -fv
 ```
 
-### X-terminal set fonts
+### terminator set fonts
 
 - Preferences -> Profiles -> default -> General -> Font
 

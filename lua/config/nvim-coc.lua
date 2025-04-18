@@ -184,7 +184,6 @@ vim.g.coc_global_extensions = {
     'coc-html',
     'coc-css',
     'coc-json',
-    'coc-clangd',
     'coc-java',
     'coc-sh',
     'coc-pyright',
@@ -196,4 +195,5 @@ vim.g.coc_global_extensions = {
     'coc-tsserver',
     'coc-yaml',
     'coc-vetur',
+    'coc-clangd',
 }

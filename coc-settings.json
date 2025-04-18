@@ -151,6 +151,21 @@
   },
 
   "languageserver": {
+    "bashls": {
+      "command": "bash-language-server",
+      "args": ["start"],
+      "filetypes": ["sh", "bash"],
+      "initializationOptions": {
+        "diagnostics": {
+          "enable": true,
+          "shellcheckPath": "/usr/bin/shellcheck"
+        }
+      },
+      "settings": {
+        "shellcheck.enable": true
+      }
+    },
+
     "ccls": {
       "command": "ccls",
       "filetypes": ["c", "cpp", "cc", "objc", "objcpp"],
@@ -175,17 +190,19 @@
         "clang": {
           "extraArgs": [
             "--std=c++17",
+            "--clang-tidy",
             // x86_64-linux-gnu
             "-I/usr/include",
             "-I/usr/include/x86_64-linux-gnu",
-            "-I/usr/include/c++/12",
+            "-I/usr/include/c++/13",
             // aarch64-linux-gnu
             "-I/usr/aarch64-linux-gnu/include",
-            "-I/usr/aarch64-linux-gnu/include/c++/11",
+            "-I/usr/aarch64-linux-gnu/include/c++/13",
             // arm-linux-gnueabihf
             "-I/usr/arm-linux-gnueabihf/include",
-            "-I/usr/arm-linux-gnueabihf/include/c++/11"
+            "-I/usr/arm-linux-gnueabihf/include/c++/13"
           ],
+          // "resourceDir": "/usr/lib/llvm-18/lib/clang/18",
           "tidy": {
             "enable": true,
             "checks": "*",
@@ -194,6 +211,7 @@
         }
       }
     },
+
     "lua": {
       "command": "lua-language-server",
       "filetypes": ["lua"],
