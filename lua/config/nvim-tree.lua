@@ -3,15 +3,6 @@ if not is_ok then
     return
 end
 
--- :NvimTreeToggle Open or close the tree. Takes an optional path argument.
-vim.keymap.set("n", "<leader>tt", ":NvimTreeToggle<CR>", opts)
--- :NvimTreeFocus Open the tree if it is closed, and then focus on the tree.
-vim.keymap.set("n", "<leader>te", ":NvimTreeFocus<CR>", opts)
--- :NvimTreeFindFile Move the cursor in the tree for the current buffer, opening folders if needed.
-vim.keymap.set("n", "<leader>tf", ":NvimTreeFindFile<CR>", opts)
--- :NvimTreeCollapse Collapses the nvim-tree recursively.
-vim.keymap.set("n", "<leader>tc", ":NvimTreeCollapse<CR>", opts)
-
 --
 -- This function has been generated from your
 --   view.mappings.list
