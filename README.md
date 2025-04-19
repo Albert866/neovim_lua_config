@@ -2,7 +2,7 @@
 
 ---
 
-- Developer use system: Ubuntu version greater than 22.04 LTS
+- Developer use system: Ubuntu version greater than 24.04 LTS
 
 ## tree
 
@@ -82,6 +82,10 @@ sudo apt-get install -y lua5.1 lua5.3 luarocks
 curl -sL https://deb.nodesource.com/setup_20.x | sudo -E bash -
 sudo apt-get install -y nodejs
 node --version
+
+# upgrade nodejs to last stable
+sudo npm install -g n
+sudo n stable
 ```
 
 ## Install npm
@@ -109,10 +113,10 @@ yarn --version
 ```bash
 sudo apt-get install -y python3 python3-venv python3-dev python3-pip python3-neovim
 python3 --version
-pip3 install --upgrade pip [--break-system-packages]
+pip3 install --upgrade pip --break-system-packages
 pip3 --version
-pip3 install pynvim
-pip3 install --upgrade pynvim
+pip3 install pynvim --break-system-packages
+pip3 install --upgrade pynvim --break-system-packages
 ```
 
 ## Install ctags
@@ -142,8 +146,8 @@ sudo update-alternatives --install /usr/bin/c++ c++ /usr/bin/clang++ 100
 
 ```bash
 # update-alternatives --install <link> <name> <path> <priority>
-sudo update-alternatives --install /usr/bin/clang clang /usr/bin/clang-14 100
-sudo update-alternatives --install /usr/bin/clang++ clang++ /usr/bin/clang++-14 100
+sudo update-alternatives --install /usr/bin/clang clang /usr/bin/clang-18 100
+sudo update-alternatives --install /usr/bin/clang++ clang++ /usr/bin/clang++-18 100
 # Switch between GCC and Clang toolchains
 sudo update-alternatives --config cc
 clang -v

@@ -180,7 +180,7 @@ vim.g.coc_global_extensions = {
     'coc-snippets',
     'coc-prettier',
     'coc-highlight',
-
+    -- language server
     'coc-html',
     'coc-css',
     'coc-json',
@@ -195,5 +195,6 @@ vim.g.coc_global_extensions = {
     'coc-tsserver',
     'coc-yaml',
     'coc-vetur',
-    'coc-clangd',
+    -- manual install : npm audit fix --force
+    'coc-ccls',
 }

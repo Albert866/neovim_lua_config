@@ -21,9 +21,8 @@ require('lazy').setup({
     { "kkharji/sqlite.lua" },    -- sqlite
     { "MunifTanjim/nui.nvim" },  -- GUI library
     -- colorscheme
-    { "crusoexia/vim-monokai" }, -- vim-monokai colorscheme
-    -- { "tanvirtin/monokai.nvim" },
-    { "marko-cerovac/material.nvim" },
+    { "tanvirtin/monokai.nvim" },  -- main
+    { "marko-cerovac/material.nvim" }, -- line
 
     {
         "nvim-tree/nvim-web-devicons",
