@@ -174,9 +174,6 @@ require('lazy').setup({
     {
         "neoclide/coc.nvim",
         branch = "release",
-        config = function()
-            require("config.nvim-coc")
-        end,
     },
 
     -- lsp

@@ -106,6 +106,7 @@ echo "deb [signed-by=/etc/apt/trusted.gpg.d/yarnpkg-archive-keyring.gpg] https:/
 sudo apt-get update
 sudo apt-get install yarn
 yarn --version
+sudo yarn global add neovim
 ```
 
 ## Install python3
@@ -183,15 +184,9 @@ unzip FiraCode.zip -d ~/.local/share/fonts
 fc-cache -fv
 ```
 
-- Terminal set fonts (`FiraCode Nerd Font Mono Regular 13`)
+- Terminator set fonts (`FiraCode Nerd Font Mono Regular 13`)
+- Terminator set fonts (`FiraCode Nerd Font Mono 13`)
 
-OR
-
-```bash
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/Hasklig.zip
-unzip Hasklig.zip -d ~/.local/share/fonts
-fc-cache -fv
-```
 
 ### terminator set fonts
 

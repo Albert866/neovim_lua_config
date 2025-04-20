@@ -175,17 +175,13 @@ vim.opt.statusline = "%{coc#status()}%{get(b:,'coc_current_function','')}"
 -- keyset("n", "\\p", ":<C-u>CocListResume<cr>", opts)
 
 vim.g.coc_global_extensions = {
-    'coc-yank',
-    'coc-emmet',
-    'coc-snippets',
-    'coc-prettier',
-    'coc-highlight',
+    'coc-yank',      -- 提供剪贴板历史管理功能，方便查看和使用复制的内容
+    'coc-prettier',  -- 提供 Prettier 支持，用于代码格式化
     -- language server
     'coc-html',
     'coc-css',
     'coc-json',
     'coc-java',
-    'coc-sh',
     'coc-pyright',
     'coc-lua',
     'coc-markdownlint',
@@ -194,7 +190,7 @@ vim.g.coc_global_extensions = {
     'coc-gn',
     'coc-tsserver',
     'coc-yaml',
-    'coc-vetur',
     -- manual install : npm audit fix --force
     'coc-ccls',
+    'coc-clangd',
 }
