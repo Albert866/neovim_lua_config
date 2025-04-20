@@ -92,6 +92,12 @@ require('lazy').setup({
             require("config.nvim-treesitter-textobjects")
         end,
     },
+    {
+        "nvim-treesitter/nvim-treesitter-context",
+        opts = {
+            max_lines = 3,
+        },
+    },
     -- Install nvim-ts-rainbow
     {
         "p00f/nvim-ts-rainbow",
@@ -175,16 +181,6 @@ require('lazy').setup({
         "neoclide/coc.nvim",
         branch = "release",
     },
-
-    -- lsp
-    -- { "neovim/nvim-lspconfig" }, -- enable LSP
-    -- { "williamboman/mason.nvim" }, -- simple to use language server installer
-    -- { "williamboman/mason-lspconfig.nvim" },
-    -- { "nvimtools/none-ls.nvim" }, -- for formatters and linters
-    -- { "j-hui/fidget.nvim", tag = "legacy" },
-    -- { "SmiteshP/nvim-navic" }, -- 在 winbar 展示当前的路径
-    -- { "utilyre/barbecue.nvim" },
-    -- { "kosayoda/nvim-lightbulb" }, -- 右下角展示索引的进度
 
     -- Install vim-gn
     {
