@@ -71,15 +71,15 @@ https://github.com/neovim/neovim/releases
 ## Install lua and luarocks
 
 ```bash
-sudo apt-get install -y lua5.1 lua5.3 luarocks
+sudo apt-get install -y lua5.1 lua5.3 luarocks luajit
 ```
 
 ## Install nodejs
 
-- nodejs version greater than 18.0
+- nodejs version greater than 20.0
 
 ```bash
-curl -sL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_22.x | sudo -E bash -
 sudo apt-get install -y nodejs
 node --version
 
@@ -166,7 +166,6 @@ ccls --version
 npm install -g typescript typescript-language-server
 npm install -g pyright
 npm install -g bash-language-server
-npm install -g vscode-languageserver-types
 ```
 
 ## Set terminal fonts
@@ -186,7 +185,6 @@ fc-cache -fv
 
 - Terminator set fonts (`FiraCode Nerd Font Mono Regular 13`)
 - Terminator set fonts (`FiraCode Nerd Font Mono 13`)
-
 
 ### terminator set fonts
 

@@ -175,9 +175,15 @@ vim.opt.statusline = "%{coc#status()}%{get(b:,'coc_current_function','')}"
 -- keyset("n", "\\p", ":<C-u>CocListResume<cr>", opts)
 
 vim.g.coc_global_extensions = {
-    'coc-yank',      -- 提供剪贴板历史管理功能，方便查看和使用复制的内容
-    'coc-prettier',  -- 提供 Prettier 支持，用于代码格式化
+    'coc-yank',     -- 提供剪贴板历史管理功能，方便查看和使用复制的内容
+    'coc-prettier', -- 提供 Prettier 支持，用于代码格式化
+    'coc-eslint',   -- 提供 ESLint 支持，用于 JavaScript 和 TypeScript 的代码检查和修复
+    'coc-snippets', -- 提供代码片段支持
+    'coc-sh',       -- 提供 Shell 脚本支持
+    'coc-emmet',    -- 提供 Emmet 支持，用于 HTML 和 CSS 的快速编写
     -- language server
+    'coc-rls',      -- Rust 语言服务器
+    'coc-vetur',    -- 提供 Vue.js 支持
     'coc-html',
     'coc-css',
     'coc-json',
@@ -188,8 +194,8 @@ vim.g.coc_global_extensions = {
     'coc-cmake',
     'coc-git',
     'coc-gn',
-    'coc-tsserver',
-    'coc-yaml',
+    'coc-tsserver', -- 提供 TypeScript 和 JavaScript 的语言支持
+    'coc-yaml',     -- 提供 YAML 支持
     -- manual install : npm audit fix --force
     'coc-ccls',
     'coc-clangd',
