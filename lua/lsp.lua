@@ -196,7 +196,4 @@ vim.g.coc_global_extensions = {
     'coc-gn',
     'coc-tsserver', -- 提供 TypeScript 和 JavaScript 的语言支持
     'coc-yaml',     -- 提供 YAML 支持
-    -- manual install : npm audit fix --force
-    'coc-ccls',
-    'coc-clangd',
 }
