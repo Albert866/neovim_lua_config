@@ -19,4 +19,4 @@ require('aerial').setup({
 })
 
 -- Set up keybindings
-vim.api.nvim_set_keymap('n', '<leader>vt', ':AerialToggle!<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>t', ':AerialToggle!<CR>:wincmd p<CR>', { noremap = true, silent = true })
