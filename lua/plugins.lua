@@ -16,12 +16,12 @@ vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
     -- Base plugin
-    { "nvim-lua/plenary.nvim" }, -- lua plugins library
-    { "folke/which-key.nvim" },  -- configure and prompt shortcut keys
-    { "kkharji/sqlite.lua" },    -- sqlite
-    { "MunifTanjim/nui.nvim" },  -- GUI library
+    { "nvim-lua/plenary.nvim" },       -- lua plugins library
+    { "folke/which-key.nvim" },        -- configure and prompt shortcut keys
+    { "kkharji/sqlite.lua" },          -- sqlite
+    { "MunifTanjim/nui.nvim" },        -- GUI library
     -- colorscheme
-    { "tanvirtin/monokai.nvim" },  -- main
+    { "tanvirtin/monokai.nvim" },      -- main
     { "marko-cerovac/material.nvim" }, -- line
 
     {
@@ -31,6 +31,9 @@ require('lazy').setup({
             default = true,
             strict = true,
         },
+    },
+    {
+        "echasnovski/mini.nvim",
     },
 
     -- Better UI
@@ -95,7 +98,7 @@ require('lazy').setup({
     {
         "nvim-treesitter/nvim-treesitter-context",
         opts = {
-            max_lines = 3,
+            max_lines = 6,
         },
     },
     -- Install nvim-ts-rainbow
