@@ -98,7 +98,7 @@ require('lazy').setup({
     {
         "nvim-treesitter/nvim-treesitter-context",
         opts = {
-            max_lines = 6,
+            max_lines = 5,
         },
     },
     -- Install nvim-ts-rainbow
