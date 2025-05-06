@@ -1,5 +1,5 @@
 -- define your colorscheme here
--- 'monokai_pro' or 'monokai_soda' or 'monokai_ristretto'
+-- Monokai (monokai) Monokai Pro (monokai_pro) Monokai Soda (monokai_soda) Monokai Ristretto (monokai_ristretto)
 local colorscheme = 'monokai_soda'
 
 -- Fallback to other colorschemes
