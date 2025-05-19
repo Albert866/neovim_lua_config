@@ -16,6 +16,12 @@ require('aerial').setup({
     },
 
     filter_kind = false, -- display all symbols
+
+    -- Clost the Aerial window when leaving the buffer
+    on_enter = function(_)
+        -- close the aerial window
+        require("aerial").close()
+    end,
 })
 
 -- Set up keybindings
