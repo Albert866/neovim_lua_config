@@ -54,6 +54,7 @@ sudo apt install xclip bear cmake ccls clang generate-ninja ninja-build automake
      git gcc g++ pkg-config autoconf libssl-dev libdbus-1-dev default-jre \
      libglib2.0-dev libavahi-client-dev ninja-build python3-venv python3-dev \
      python3-pip unzip libgirepository1.0-dev libcairo2-dev libreadline-dev \
+     ruby ruby-dev gem bison
 ```
 
 ## Install neovim
@@ -161,9 +162,11 @@ sudo update-alternatives --install /usr/bin/clang++ clang++ /usr/bin/clang++-18 
 # Switch between GCC and Clang toolchains
 sudo update-alternatives --config cc
 clang -v
+cc -v
 # Switch between GCC and Clang++ toolchains
 sudo update-alternatives --config c++
 clang++ -v
+c++ -v
 ```
 
 ### Install C/C++ language server
