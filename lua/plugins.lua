@@ -218,12 +218,12 @@ require('lazy').setup({
         ft = { "markdown" }
     },
 
-    -- same ctags vista, Right display type list
+    -- vista
     {
-        'stevearc/aerial.nvim',
+        "liuchengxu/vista.vim",
+        dependencies = { "nvim-tree/nvim-web-devicons" },
         config = function()
-            require('config.nvim-aerial')
-        end
+            require("config.vista")
+        end,
     },
-
 })
