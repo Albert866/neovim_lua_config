@@ -7,7 +7,7 @@ else
     vim.g.vista_default_executive = 'coc'
 end
 -- Vista 侧边栏宽度
-vim.g.vista_sidebar_width = 40
+vim.g.vista_sidebar_width = 32
 -- 光标悬停时显示当前符号
 vim.g.vista_echo_cursor = 1
 -- 可选：只显示函数和类
