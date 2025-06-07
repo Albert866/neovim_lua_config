@@ -4,4 +4,6 @@
 local opt = vim.opt
 
 opt.tabstop = 2 -- Number of spaces tabs count for
-opt.shiftwidth = 2 -- Size of an indent
+opt.shiftwidth = 4 -- Size of an indent
+
+vim.g.lazyvim_check_order = false -- Disable the check for order of plugins

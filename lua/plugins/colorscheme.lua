@@ -3,8 +3,8 @@ if true then
   return {}
 end
 
+-- monokai.nvim is a popular colorscheme for Neovim
 return {
-  -- monokai
   {
     "tanvirtin/monokai.nvim",
   },
