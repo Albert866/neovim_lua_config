@@ -4,7 +4,7 @@
 -- DoxLic to generate license comment,
 -- DoxAuthor to generate author comment
 
-vim.g.DoxygenToolkit_commentType = "C++"
+vim.g.DoxygenToolkit_commentType = 1
 vim.g.DoxygenToolkit_briefTag_funcName = "yes"
 vim.g.doxygen_enhanced_color = 1
 
