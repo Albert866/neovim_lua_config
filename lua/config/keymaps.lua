@@ -3,3 +3,5 @@
 -- Add any additional keymaps here
 vim.keymap.set("n", "s", "s", { noremap = true })
 vim.keymap.set("n", "S", "S", { noremap = true })
+vim.keymap.set("v", "s", "s", { noremap = true })
+vim.keymap.set("v", "S", "S", { noremap = true })
