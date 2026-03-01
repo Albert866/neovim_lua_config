@@ -1,7 +1,7 @@
 return {
   "CopilotChat.nvim",
   opts = {
-    model = "gpt-5.1",
+    model = "gpt-4.1", -- model to use, currently supports gpt-5.1
     temperature = 0.1,
     window = {
       layout = "vertical",
