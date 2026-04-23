@@ -12,5 +12,9 @@ return {
       width = 0.4,
     },
     auto_insert_mode = true,
+    servers = {
+      -- copilot.lua only works with its own copilot lsp server
+      copilot = { enabled = true },
+    },
   },
 }
