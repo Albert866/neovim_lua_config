@@ -13,7 +13,7 @@ vim.g.DoxygenToolkit_authorName = "Albert"
 vim.g.DoxygenToolkit_licenseBrief = "Apache License 2.0"
 vim.g.DoxygenToolkit_licenseTag = table.concat({
   "",
-  "    Copyright (c) 2026 Dreame SmartHome LLC.",
+  "    Copyright (c) 2026 SmartHome LLC.",
   "    All rights reserved.",
   "",
   '    Licensed under the Apache License, Version 2.0 (the "License");',
