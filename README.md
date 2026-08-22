@@ -18,6 +18,7 @@ model_provider = "openai"
 openai_base_url = "https://xxx.xxx"
 model = "gpt-5.6-sol"
 model_reasoning_effort = "xhigh"
+tui.vim_mode_default = true
 service_tier = "priority"
 plan_mode_reasoning_effort = "xhigh"
 allowed_approvals_reviewers = ["auto_review"]
