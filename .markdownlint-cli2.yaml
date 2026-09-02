@@ -1,0 +1,3 @@
+config:
+  # Disable line-length warnings for Markdown files.
+  MD013: false
